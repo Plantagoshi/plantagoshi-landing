@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@theme {
+  /* Colors */
+  --color-primary: #386641;
+  --color-primary-dark: #5A8B64;
+  --color-secondary: #BC4749;
+  --color-gold: #E2B059;
+  --color-bg: #F5F5F5;
+
+  /* Fonts */
+  --font-display: 'Quicksand', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Border radius extras */
+  --radius-4xl: 2rem;
+  --radius-5xl: 3rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: #1A1A1A;
+}

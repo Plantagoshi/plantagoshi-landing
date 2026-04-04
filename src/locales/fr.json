@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "features": "Le Pot",
+    "app": "L'App",
+    "journey": "Notre Parcours",
+    "team": "L'Équipe",
+    "adopter": "Adopter"
+  },
+  "hero": {
+    "mood": "Mon humeur :",
+    "title": "Votre plante a des sentiments.",
+    "subtitle": "Êtes-vous à l'écoute ?",
+    "description": "Plantagoshi est un pot connecté intelligent avec une âme IA — il surveille la santé de votre plante et exprime son humeur en temps réel via un écran intégré et une application compagnon.",
+    "badge": "Projet de compétition entrepreneuriale — Cégep / Université 2024",
+    "cta": "Rejoindre la liste d'attente",
+    "ctaSecondary": "Voir comment ça marche",
+    "moisture": "Humidité",
+    "light": "Lumière",
+    "temp": "Temp"
+  },
+  "features": {
+    "label": "Le Matériel",
+    "title": "Plus qu'un pot. Un Compagnon.",
+    "description": "Construit de zéro avec une conception PCB personnalisée, un firmware embarqué et une IA dédiée — c'est un projet étudiant matériel + logiciel complet.",
+    "precision": {
+      "title": "Capteurs de Précision",
+      "desc": "Surveille l'humidité du sol, la lumière ambiante (lux), la température et l'humidité 24h/24 grâce à des capteurs calibrés intégrés au PCB personnalisé."
+    },
+    "ai": {
+      "title": "Personnalité IA de la Plante",
+      "desc": "Les données brutes des capteurs sont traitées par notre API pour générer des réponses expressives à la première personne — chaque plante a une voix unique."
+    },
+    "app": {
+      "title": "App de Soins à Distance",
+      "desc": "Discutez avec votre plante, déclenchez l'arrosage, visualizez les données en direct et gérez plusieurs plantes de n'importe où via notre application mobile."
+    }
+  },
+  "appShowcase": {
+    "label": "Le Logiciel",
+    "title": "L'App : la Voix de Votre Plante",
+    "description": "L'application Plantagoshi ne se limite pas aux graphiques — c'est là où vous et votre plante avez de vraies conversations.",
+    "features": [
+      "Suivi des capteurs en temps réel avec des \"Courbes Organiques\" fluides",
+      "Interface de chat alimentée par notre API PlantAI",
+      "UI pilotée par les émotions qui change de couleur selon l'humeur de votre plante",
+      "Tableau de bord multi-plantes pour gérer toute votre collection",
+      "Intégration maison connectée via API développeur"
+    ],
+    "screenshot": "Capture d'écran de l'app à venir",
+    "screenshotSubtitle": "Remplacer par votre démonstration"
+  },
+  "timeline": {
+    "label": "Notre Parcours",
+    "title": "Des Fils au Merveille",
+    "description": "Un projet étudiant construit sur plusieurs mois d'itération et d'apprentissage.",
+    "steps": [
+      {
+        "phase": "V1 — Le Prototype",
+        "date": "Début du Projet",
+        "note": "Preuve de concept avec breadboard, Arduino Uno et sondes d'humidité externes. Axé sur la validation de la précision des données des capteurs."
+      },
+      {
+        "phase": "V2 — Le Cerveau",
+        "date": "Milieu du Projet",
+        "note": "Première intégration IA. Conception PCB personnalisée. Remplacement de l'Arduino par un ESP32 pour la connectivité WiFi et une consommation réduite."
+      },
+      {
+        "phase": "V3 — L'Interface Vivante",
+        "date": "Version Finale",
+        "note": "Boîtier 3D complet avec écran OLED émotionnel intégré, application polie et pile API complète. Prêt pour la compétition."
+      }
+    ],
+    "photoPlaceholder": "Ajouter une photo de"
+  },
+  "team": {
+    "label": "Les Créateurs",
+    "title": "Créé par des Étudiants, pour les Amoureux des Plantes",
+    "description": "Une équipe passionnée d'étudiants de votre école combinant matériel, logiciel et amour des plantes.",
+    "members": [
+      { "name": "Votre Nom", "role": "Matériel & Firmware" },
+      { "name": "Co-équipier 2", "role": "Application Mobile" },
+      { "name": "Co-atégique 3", "role": "IA & Backend" },
+      { "name": "Co-atégique 4", "role": "Design & UX" }
+    ]
+  },
+  "waitlist": {
+    "title": "Prêt à donner une voix à votre plante ?",
+    "description": "Nous sommes actuellement en bêta. Laissez votre email pour être notifié quand Plantagoshi sera prêt à venir chez vous.",
+    "placeholder": "votre email",
+    "cta": "Rejoindre la liste",
+    "note": "Pas de spam. Que des nouvelles des plantes et des mises à jour."
+  },
+  "footer": {
+    "copyright": "© 2024 Plantagoshi Labs — Projet Étudiant. Construit avec terre, code & café.",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "demo": "Vidéo Démo"
+  }
+}

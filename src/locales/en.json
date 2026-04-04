@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "features": "The Pot",
+    "app": "The App",
+    "journey": "Our Journey",
+    "team": "Team",
+    "adopt": "Adopt Now"
+  },
+  "hero": {
+    "mood": "My mood:",
+    "title": "Your plant has feelings.",
+    "titleLine2": "Are you listening?",
+    "subtitle": "Are you listening?",
+    "description": "Plantagoshi is a smart IoT planter with an AI soul — it senses your plant's health and expresses its mood in real time through an integrated screen and a companion app.",
+    "badge": "Entrepreneurship Competition Project — Cégep / University 2024",
+    "cta": "Join the Waitlist",
+    "ctaSecondary": "See How It Works",
+    "moisture": "Moisture",
+    "light": "Light",
+    "temp": "Temp"
+  },
+  "features": {
+    "label": "The Hardware",
+    "title": "More than a Pot. A Companion.",
+    "description": "Built from scratch with custom PCB design, embedded firmware, and a dedicated AI — this is a full hardware + software student project.",
+    "precision": {
+      "title": "Precision Sensing",
+      "desc": "Monitors soil moisture, ambient light (lux), temperature, and humidity 24/7 using calibrated sensors embedded in the custom PCB."
+    },
+    "ai": {
+      "title": "AI Plant Personality",
+      "desc": "Raw sensor data is processed by our API to generate expressive, first-person plant responses — each plant has a unique voice."
+    },
+    "app": {
+      "title": "Remote Care App",
+      "desc": "Chat with your plant, trigger watering, view live data, and manage multiple plants from anywhere via our companion mobile app."
+    }
+  },
+  "appShowcase": {
+    "label": "The Software",
+    "title": "The App: Your Plant's Voice",
+    "description": "The Plantagoshi app doesn't just show charts — it's where you and your plant have actual conversations.",
+    "features": [
+      "Real-time sensor tracking with smooth \"Organic Curves\"",
+      "Chat interface powered by our PlantAI API",
+      "Emotion-driven UI that changes color with your plant's mood",
+      "Multi-plant dashboard to manage your whole collection",
+      "Smart home integration via developer API"
+    ],
+    "screenshot": "App screenshot coming soon",
+    "screenshotSubtitle": "Replace with your actual app demo"
+  },
+  "timeline": {
+    "label": "Our Journey",
+    "title": "From Wires to Wonder",
+    "description": "A student project built over several months of iteration and learning.",
+    "steps": [
+      {
+        "phase": "V1 — The Prototype",
+        "date": "Project Start",
+        "note": "Proof of concept using breadboard, Arduino Uno, and external soil moisture probes. Focused on validating sensor data accuracy."
+      },
+      {
+        "phase": "V2 — The Brain",
+        "date": "Mid-Project",
+        "note": "First AI integration. Custom PCB design. Replaced Arduino with ESP32 for WiFi connectivity and lower power consumption."
+      },
+      {
+        "phase": "V3 — The Living Interface",
+        "date": "Final Version",
+        "note": "Full 3D-printed enclosure with integrated OLED emotional display, polished app, and full API stack. Competition-ready."
+      }
+    ],
+    "photoPlaceholder": "Add a photo of"
+  },
+  "team": {
+    "label": "The Makers",
+    "title": "Built by Students, for Plant Lovers",
+    "description": "A passionate team of students from your school combining hardware, software, and a love of plants.",
+    "members": [
+      { "name": "Your Name", "role": "Hardware & Firmware" },
+      { "name": "Teammate 2", "role": "Mobile App" },
+      { "name": "Teammate 3", "role": "AI & Backend" },
+      { "name": "Teammate 4", "role": "Design & UX" }
+    ]
+  },
+  "waitlist": {
+    "title": "Ready to give your plant a voice?",
+    "description": "We're currently in beta. Leave your email to be notified when Plantagoshi is ready to come home with you.",
+    "placeholder": "your email",
+    "cta": "Join Waitlist",
+    "note": "No spam. Just plant news and launch updates."
+  },
+  "footer": {
+    "copyright": "© 2024 Plantagoshi Labs — Student Project. Built with soil, code & caffeine.",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "demo": "Demo Video"
+  }
+}

@@ -22,18 +22,33 @@
       </div>
 
       <div class="hidden md:flex gap-8 font-medium text-sm">
-        <a href="#features" class="hover:text-primary transition-colors">The Pot</a>
-        <a href="#app" class="hover:text-primary transition-colors">The App</a>
-        <a href="#journey" class="hover:text-primary transition-colors">Our Journey</a>
-        <a href="#team" class="hover:text-primary transition-colors">Team</a>
+        <a href="#features" class="hover:text-primary transition-colors">{{ t('nav.features') }}</a>
+        <a href="#app" class="hover:text-primary transition-colors">{{ t('nav.app') }}</a>
+        <a href="#journey" class="hover:text-primary transition-colors">{{ t('nav.journey') }}</a>
+        <a href="#team" class="hover:text-primary transition-colors">{{ t('nav.team') }}</a>
       </div>
 
-      <a
-        href="#waitlist"
-        class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-primary-dark transition-colors"
-      >
-        Adopt Now 🌱
-      </a>
+      <div class="flex items-center gap-4">
+        <button
+          @click="toggleLocale"
+          class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 hover:bg-neutral-200 transition-colors text-sm font-medium"
+        >
+          <span class="text-base">{{ currentLocale === 'en' ? '🇬🇧' : '🇫🇷' }}</span>
+          <span class="uppercase">{{ currentLocale }}</span>
+        </button>
+        <a
+          href="#waitlist"
+          class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-primary-dark transition-colors"
+        >
+          {{ t('nav.adopt') }} 🌱
+        </a>
+      </div>
     </div>
   </nav>
 </template>
+
+<script setup>
+import { useI18n } from "../composables/useI18n";
+
+const { t, currentLocale, toggleLocale } = useI18n();
+</script>

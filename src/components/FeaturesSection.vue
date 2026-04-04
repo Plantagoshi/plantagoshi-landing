@@ -2,11 +2,10 @@
   <section id="features" class="py-24 bg-white rounded-4xl mx-4 md:mx-10 shadow-sm">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16 space-y-3">
-        <span class="text-primary font-bold text-sm uppercase tracking-widest">The Hardware</span>
-        <h2 class="text-4xl font-bold font-display">More than a Pot. A Companion.</h2>
+        <span class="text-primary font-bold text-sm uppercase tracking-widest">{{ t('features.label') }}</span>
+        <h2 class="text-4xl font-bold font-display">{{ t('features.title') }}</h2>
         <p class="text-neutral-500 max-w-2xl mx-auto">
-          Built from scratch with custom PCB design, embedded firmware, and a dedicated AI — this is a full hardware +
-          software student project.
+          {{ t('features.description') }}
         </p>
       </div>
 
@@ -26,21 +25,26 @@
 </template>
 
 <script setup>
-const features = [
+import { computed } from "vue";
+import { useI18n } from "../composables/useI18n";
+
+const { t } = useI18n();
+
+const features = computed(() => [
   {
     emoji: "🔬",
-    title: "Precision Sensing",
-    desc: "Monitors soil moisture, ambient light (lux), temperature, and humidity 24/7 using calibrated sensors embedded in the custom PCB.",
+    title: t('features.precision.title'),
+    desc: t('features.precision.desc'),
   },
   {
     emoji: "🤖",
-    title: "AI Plant Personality",
-    desc: "Raw sensor data is processed by our API to generate expressive, first-person plant responses — each plant has a unique voice.",
+    title: t('features.ai.title'),
+    desc: t('features.ai.desc'),
   },
   {
     emoji: "📱",
-    title: "Remote Care App",
-    desc: "Chat with your plant, trigger watering, view live data, and manage multiple plants from anywhere via our companion mobile app.",
+    title: t('features.app.title'),
+    desc: t('features.app.desc'),
   },
-];
+]);
 </script>

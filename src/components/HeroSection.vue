@@ -5,24 +5,23 @@
       <div class="space-y-8">
         <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-neutral-100">
           <span class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-          <span class="text-sm font-bold text-neutral-500 uppercase tracking-wide"> My mood: {{ currentFace }} </span>
+          <span class="text-sm font-bold text-neutral-500 uppercase tracking-wide"> {{ t('hero.mood') }} {{ currentFace }} </span>
         </div>
 
         <h1 class="text-5xl md:text-6xl font-bold leading-tight font-display">
-          Your plant has<br />feelings.
-          <span class="text-primary block mt-1">Are you listening?</span>
+          {{ t('hero.title') }}<br />
+          <span class="text-primary block mt-1">{{ t('hero.subtitle') }}</span>
         </h1>
 
         <p class="text-lg text-neutral-600 max-w-md leading-relaxed">
-          Plantagoshi is a smart IoT planter with an AI soul — it senses your plant's health and expresses its mood in
-          real time through an integrated screen and a companion app.
+          {{ t('hero.description') }}
         </p>
 
         <!-- Student / Competition Badge -->
         <div
           class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 px-4 py-2 rounded-full text-sm font-medium"
         >
-          🏆 Entrepreneurship Competition Project — Cégep / University 2024
+          🏆 {{ t('hero.badge') }}
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
@@ -30,13 +29,13 @@
             href="#waitlist"
             class="bg-primary text-white text-center px-8 py-4 rounded-full text-base font-bold shadow-lg shadow-green-900/10 hover:bg-primary-dark transition-all"
           >
-            Join the Waitlist
+            {{ t('hero.cta') }}
           </a>
           <a
             href="#features"
             class="bg-white border-2 border-neutral-200 px-8 py-4 rounded-full text-base font-bold hover:bg-neutral-50 transition-all text-center"
           >
-            See How It Works ↓
+            {{ t('hero.ctaSecondary') }} ↓
           </a>
         </div>
       </div>
@@ -56,17 +55,17 @@
             <div class="bg-blue-50 p-3 rounded-2xl flex flex-col items-center gap-1">
               <span class="text-blue-500 text-lg">💧</span>
               <span class="font-mono-data text-xs font-bold">12%</span>
-              <span class="text-xs text-neutral-400">Moisture</span>
+              <span class="text-xs text-neutral-400">{{ t('hero.moisture') }}</span>
             </div>
             <div class="bg-amber-50 p-3 rounded-2xl flex flex-col items-center gap-1">
               <span class="text-amber-500 text-lg">☀️</span>
               <span class="font-mono-data text-xs font-bold">840lx</span>
-              <span class="text-xs text-neutral-400">Light</span>
+              <span class="text-xs text-neutral-400">{{ t('hero.light') }}</span>
             </div>
             <div class="bg-red-50 p-3 rounded-2xl flex flex-col items-center gap-1">
               <span class="text-red-400 text-lg">🌡️</span>
               <span class="font-mono-data text-xs font-bold">24°C</span>
-              <span class="text-xs text-neutral-400">Temp</span>
+              <span class="text-xs text-neutral-400">{{ t('hero.temp') }}</span>
             </div>
           </div>
         </div>
@@ -79,6 +78,9 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
 import PlantFace from "./PlantFace.vue";
+import { useI18n } from "../composables/useI18n";
+
+const { t } = useI18n();
 
 const faces = ["happy", "content", "thirsty", "angry", "sleepy"];
 const activeFace = ref("happy");

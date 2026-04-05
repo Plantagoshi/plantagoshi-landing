@@ -21,22 +21,17 @@
         <div
           class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 px-4 py-2 rounded-full text-sm font-medium"
         >
-          🏆 {{ t('hero.badge') }}
+          <Trophy class="w-4 h-4" />
+          {{ t('hero.badge') }}
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a
-            href="#waitlist"
-            class="bg-primary text-white text-center px-8 py-4 rounded-full text-base font-bold shadow-lg shadow-green-900/10 hover:bg-primary-dark transition-all"
-          >
+          <BaseButton href="#waitlist" variant="primary" size="lg">
             {{ t('hero.cta') }}
-          </a>
-          <a
-            href="#features"
-            class="bg-white border-2 border-neutral-200 px-8 py-4 rounded-full text-base font-bold hover:bg-neutral-50 transition-all text-center"
-          >
+          </BaseButton>
+          <BaseButton href="#features" variant="secondary" size="lg">
             {{ t('hero.ctaSecondary') }} ↓
-          </a>
+          </BaseButton>
         </div>
       </div>
 
@@ -53,17 +48,17 @@
           <!-- Sensor Readings -->
           <div class="grid grid-cols-3 gap-3">
             <div class="bg-blue-50 p-3 rounded-2xl flex flex-col items-center gap-1">
-              <span class="text-blue-500 text-lg">💧</span>
+              <Droplets class="text-blue-500 w-5 h-5" />
               <span class="font-mono-data text-xs font-bold">12%</span>
               <span class="text-xs text-neutral-400">{{ t('hero.moisture') }}</span>
             </div>
             <div class="bg-amber-50 p-3 rounded-2xl flex flex-col items-center gap-1">
-              <span class="text-amber-500 text-lg">☀️</span>
+              <Sun class="text-amber-500 w-5 h-5" />
               <span class="font-mono-data text-xs font-bold">840lx</span>
               <span class="text-xs text-neutral-400">{{ t('hero.light') }}</span>
             </div>
             <div class="bg-red-50 p-3 rounded-2xl flex flex-col items-center gap-1">
-              <span class="text-red-400 text-lg">🌡️</span>
+              <Thermometer class="text-red-400 w-5 h-5" />
               <span class="font-mono-data text-xs font-bold">24°C</span>
               <span class="text-xs text-neutral-400">{{ t('hero.temp') }}</span>
             </div>
@@ -78,7 +73,9 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
 import PlantFace from "./PlantFace.vue";
+import BaseButton from "./BaseButton.vue";
 import { useI18n } from "../composables/useI18n";
+import { Trophy, Droplets, Sun, Thermometer } from "lucide-vue-next";
 
 const { t } = useI18n();
 

@@ -15,8 +15,8 @@
           :key="i"
           class="bg-neutral-50 rounded-4xl p-6 text-center w-48 border border-neutral-100"
         >
-          <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-2xl mx-auto mb-3">
-            🌱
+          <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+            <Leaf class="w-8 h-8 text-primary" />
           </div>
           <p class="font-bold font-display">{{ t(`team.members.${i}.name`) }}</p>
           <p class="text-sm text-neutral-500 mt-1">{{ t(`team.members.${i}.role`) }}</p>
@@ -28,6 +28,7 @@
 
 <script setup>
 import { useI18n } from "../composables/useI18n";
+import { Leaf } from "lucide-vue-next";
 
 const { t } = useI18n();
 </script>

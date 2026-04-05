@@ -11,7 +11,9 @@
       ></div>
 
       <div class="relative z-10 space-y-6">
-        <div class="text-5xl">🌿</div>
+        <div class="text-5xl">
+          <Leaf class="w-12 h-12 text-primary mx-auto" />
+        </div>
         <h2 class="text-4xl md:text-5xl font-bold font-display">{{ t('waitlist.title') }}</h2>
         <p class="text-neutral-400 text-lg max-w-lg mx-auto">
           {{ t('waitlist.description') }}
@@ -22,14 +24,12 @@
             v-model="email"
             type="email"
             :placeholder="t('waitlist.placeholder')"
-            class="flex-1 bg-neutral-800 border border-neutral-700 rounded-full px-6 py-4 focus:ring-2 focus:ring-primary transition-all text-white outline-none placeholder-neutral-500"
+            class="flex-1 bg-neutral-800 border border-neutral-700 rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary transition-all text-white outline-none placeholder-neutral-500"
           />
-          <button
-            @click="$emit('submit', email)"
-            class="bg-primary px-8 py-4 rounded-full font-bold hover:bg-primary-dark transition-colors whitespace-nowrap"
-          >
-            {{ t('waitlist.cta') }} 🌱
-          </button>
+          <BaseButton @click="$emit('submit', email)" variant="primary" size="lg">
+            {{ t('waitlist.cta') }}
+            <Leaf class="ml-2 w-4 h-4" />
+          </BaseButton>
         </div>
 
         <p class="text-xs text-neutral-500">{{ t('waitlist.note') }}</p>
@@ -40,7 +40,9 @@
 
 <script setup>
 import { ref } from "vue";
+import BaseButton from "./BaseButton.vue";
 import { useI18n } from "../composables/useI18n";
+import { Leaf } from "lucide-vue-next";
 
 const { t } = useI18n();
 defineEmits(["submit"]);

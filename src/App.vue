@@ -22,7 +22,6 @@ import TimelineSection from "./components/TimelineSection.vue";
 import WaitlistSection from "./components/WaitlistSection.vue";
 
 function handleWaitlist(email) {
-  // TODO: connect to your backend here
   console.log("Waitlist signup:", email);
 }
 </script>

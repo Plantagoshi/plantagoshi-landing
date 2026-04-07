@@ -10,26 +10,26 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div
-          class="p-8 rounded-4xl bg-neutral-50 hover:bg-neutral-100 transition-colors border border-neutral-100 group"
-        >
-          <Microscope class="text-primary mb-5" />
-          <h3 class="text-xl font-bold mb-3 font-display">{{ t('features.precision.title') }}</h3>
-          <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.precision.desc') }}</p>
+        <div class="card bg-base-200 hover:bg-base-300 transition-colors">
+          <div class="card-body">
+            <Microscope class="text-primary w-10 h-10 mb-3" />
+            <h3 class="card-title">{{ t('features.precision.title') }}</h3>
+            <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.precision.desc') }}</p>
+          </div>
         </div>
-        <div
-          class="p-8 rounded-4xl bg-neutral-50 hover:bg-neutral-100 transition-colors border border-neutral-100 group"
-        >
-          <Bot class="text-primary mb-5" />
-          <h3 class="text-xl font-bold mb-3 font-display">{{ t('features.ai.title') }}</h3>
-          <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.ai.desc') }}</p>
+        <div class="card bg-base-200 hover:bg-base-300 transition-colors">
+          <div class="card-body">
+            <Bot class="text-primary w-10 h-10 mb-3" />
+            <h3 class="card-title">{{ t('features.ai.title') }}</h3>
+            <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.ai.desc') }}</p>
+          </div>
         </div>
-        <div
-          class="p-8 rounded-4xl bg-neutral-50 hover:bg-neutral-100 transition-colors border border-neutral-100 group"
-        >
-          <Smartphone class="text-primary mb-5" />
-          <h3 class="text-xl font-bold mb-3 font-display">{{ t('features.app.title') }}</h3>
-          <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.app.desc') }}</p>
+        <div class="card bg-base-200 hover:bg-base-300 transition-colors">
+          <div class="card-body">
+            <Smartphone class="text-primary w-10 h-10 mb-3" />
+            <h3 class="card-title">{{ t('features.app.title') }}</h3>
+            <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.app.desc') }}</p>
+          </div>
         </div>
       </div>
     </div>

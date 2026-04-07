@@ -1,9 +1,9 @@
 <template>
-  <nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md py-4 border-b border-neutral-100">
-    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+  <nav class="navbar bg-base-200/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-base-200">
+    <div class="container max-w-6xl mx-auto px-6 flex justify-between items-center">
       <div class="flex items-center gap-2">
-        <div class="bg-primary p-2 rounded-xl">
-          <Leaf class="w-6 h-6 text-white" />
+        <div class="btn btn-primary btn-sm btn-square">
+          <Leaf class="w-5 h-5" />
         </div>
         <span class="text-xl font-bold font-display tracking-tight">Plantagoshi</span>
       </div>
@@ -16,25 +16,22 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <button
-          @click="toggleLocale"
-          class="relative w-14 h-8 rounded-full bg-neutral-200 hover:bg-neutral-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-          :aria-label="currentLocale === 'en' ? 'Switch to French' : 'Switch to English'"
-        >
-          <span
-            class="absolute left-1 top-1 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center transition-transform duration-200"
-            :class="currentLocale === 'fr' ? 'translate-x-6' : 'translate-x-0'"
+        <div class="join">
+          <button
+            class="join-item btn btn-sm"
+            :class="currentLocale === 'en' ? 'btn-primary' : 'btn-ghost'"
+            @click="currentLocale === 'fr' && toggleLocale()"
           >
-            <span class="text-xs font-bold" :class="currentLocale === 'en' ? 'text-primary' : 'text-neutral-400'"
-              >EN</span
-            >
-          </span>
-          <span
-            class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold transition-colors"
-            :class="currentLocale === 'fr' ? 'text-primary' : 'text-neutral-400'"
-            >FR</span
+            EN
+          </button>
+          <button
+            class="join-item btn btn-sm"
+            :class="currentLocale === 'fr' ? 'btn-primary' : 'btn-ghost'"
+            @click="currentLocale === 'en' && toggleLocale()"
           >
-        </button>
+            FR
+          </button>
+        </div>
         <BaseButton href="#waitlist" variant="primary" size="sm">
           {{ t("nav.adopt") }}
           <Leaf class="ml-2 w-4 h-4" />

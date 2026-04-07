@@ -24,7 +24,7 @@
             v-model="email"
             type="email"
             :placeholder="t('waitlist.placeholder')"
-            class="flex-1 bg-neutral-800 border border-neutral-700 rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary transition-all text-white outline-none placeholder-neutral-500"
+            class="input input-bordered rounded-full flex-1 bg-neutral-800 border-neutral-700 text-white placeholder-neutral-500"
           />
           <BaseButton @click="$emit('submit', email)" variant="primary" size="lg">
             {{ t('waitlist.cta') }}

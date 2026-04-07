@@ -34,7 +34,7 @@
                 </div>
                 <BaseButton href="#waitlist" variant="primary" size="sm">
                     {{ t("nav.adopt") }}
-                    <Leaf class="ml-2 w-4 h-4" />
+                    <Leaf class="w-4 h-4" />
                 </BaseButton>
             </div>
         </div>

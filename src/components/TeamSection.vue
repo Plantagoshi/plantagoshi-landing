@@ -11,18 +11,22 @@
 
       <div class="flex flex-wrap justify-center gap-8">
         <div
-          v-for="(member, i) in [0, 1, 2, 3]"
+          v-for="(member, i) in members"
           :key="i"
           class="card bg-base-200 w-48"
         >
           <div class="card-body items-center text-center p-6">
             <div class="avatar">
-              <div class="w-16 rounded-full bg-primary/10">
-                <Leaf class="w-8 h-8 text-primary mx-auto mt-4" />
+              <div class="w-24 rounded-full">
+                <img :src="member.image" />
               </div>
             </div>
-            <p class="font-bold font-display">{{ t(`team.members.${i}.name`) }}</p>
-            <p class="text-sm text-neutral-500 mt-1">{{ t(`team.members.${i}.role`) }}</p>
+            <p class="font-bold font-display">{{ t(`team.members.${member.name}.name`) }}</p>
+            <p class="text-sm text-neutral-500 mt-1">{{ t(`team.members.${member.name}.role`) }}</p>
+            <div class="flex gap-3 mt-1">
+              <SocialIcon type="github" :url="member.github" />
+              <SocialIcon type="linkedin" :url="member.linkedin" />
+            </div>
           </div>
         </div>
       </div>
@@ -32,7 +36,26 @@
 
 <script setup>
 import { useI18n } from "../composables/useI18n";
-import { Leaf } from "lucide-vue-next";
+import SocialIcon from "./SocialIcon.vue";
 
 const { t } = useI18n();
+const members = [
+    {
+        name: "zachari",
+        image: "images/zachari_profil.png",
+        github: "https://github.com/Zachari-L",
+        linkedin: "https://www.linkedin.com/in/zachari-lavall%C3%A9e-2585a7295/"
+    }, 
+    {
+        name: "gabriel",
+        image: "images/gabriel_profil.jpeg",
+        github: "https://github.com/gablaroche29",
+        linkedin: "https://www.linkedin.com/in/gabriel-laroche-a23b63252/"
+    },
+    {
+        name: "hub",
+        image: "images/hub_profil.jpeg",
+        linkedin: "https://www.linkedin.com/company/hubcst/posts/"
+    }
+];
 </script>

@@ -77,12 +77,20 @@
         "label": "The Makers",
         "title": "Built by Students, for Plant Lovers",
         "description": "A passionate team of students from your school combining hardware, software, and a love of plants.",
-        "members": [
-            { "name": "Your Name", "role": "Hardware & Firmware" },
-            { "name": "Teammate 2", "role": "Mobile App" },
-            { "name": "Teammate 3", "role": "AI & Backend" },
-            { "name": "Teammate 4", "role": "Design & UX" }
-        ]
+        "members": {
+            "zachari": {
+                "name": "Zachari Lavallée",
+                "role": "Hardware Lead"
+            },
+            "gabriel": {
+                "name": "Gabriel Laroche",
+                "role": "Software Lead"
+            },
+            "hub": {
+                "name": "HUB du Cégep de Sorel-Tracy",
+                "role": "Corporate Mentor"
+            }
+        }
     },
     "waitlist": {
         "title": "Ready to give your plant a voice?",

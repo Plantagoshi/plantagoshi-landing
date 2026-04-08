@@ -76,12 +76,20 @@
         "label": "Les Créateurs",
         "title": "Créé par des Étudiants, pour les Amoureux des Plantes",
         "description": "Une équipe passionnée d'étudiants de votre école combinant matériel, logiciel et amour des plantes.",
-        "members": [
-            { "name": "Votre Nom", "role": "Matériel & Firmware" },
-            { "name": "Co-équipier 2", "role": "Application Mobile" },
-            { "name": "Co-atégique 3", "role": "IA & Backend" },
-            { "name": "Co-atégique 4", "role": "Design & UX" }
-        ]
+        "members": {
+            "zachari": {
+                "name": "Zachari Lavallée",
+                "role": "Responsable matériel"
+            },
+            "gabriel": {
+                "name": "Gabriel Laroche",
+                "role": "Responsable logiciel"
+            },
+            "hub": {
+                "name": "HUB du Cégep de Sorel-Tracy",
+                "role": "Mentor d'entreprise"
+            }
+        }
     },
     "waitlist": {
         "title": "Prêt à donner une voix à votre plante ?",

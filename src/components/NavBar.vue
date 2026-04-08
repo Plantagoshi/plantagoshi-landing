@@ -10,7 +10,7 @@
 
             <div class="hidden md:flex gap-8 font-medium text-sm">
                 <a href="#features" class="hover:text-primary transition-colors">{{ t("nav.features") }}</a>
-                <a href="#app" class="hover:text-primary transition-colors">{{ t("nav.app") }}</a>
+                <a href="#mobileApp" class="hover:text-primary transition-colors">{{ t("nav.app") }}</a>
                 <a href="#journey" class="hover:text-primary transition-colors">{{ t("nav.journey") }}</a>
                 <a href="#team" class="hover:text-primary transition-colors">{{ t("nav.team") }}</a>
             </div>

@@ -1,5 +1,5 @@
 <template>
-  <section id="app" class="py-24 px-6">
+  <section id="mobileApp" class="py-24 px-6">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
       <div class="flex-1 space-y-6">
         <span class="text-primary font-bold text-sm uppercase tracking-widest">{{ t('appShowcase.label') }}</span>

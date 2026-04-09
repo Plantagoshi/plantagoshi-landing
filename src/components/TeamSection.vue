@@ -13,7 +13,7 @@
         <div
           v-for="(member, i) in members"
           :key="i"
-          class="card bg-base-200 w-48"
+          class="card bg-base-200 w-48 hover:scale-110 transition-all duration-200"
         >
           <div class="card-body items-center text-center p-6">
             <div class="avatar">

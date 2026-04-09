@@ -1,37 +1,223 @@
 <template>
-  <div
-    class="flex flex-col items-center justify-center p-4 rounded-3xl bg-neutral-900 w-32 h-24 shadow-inner relative transition-all duration-700"
-    :class="faceConfig.bounce"
-    :style="{ boxShadow: faceConfig.glow }"
-  >
-    <div class="flex gap-4">
-      <div :class="faceConfig.eyes" :style="{ backgroundColor: faceConfig.color }"></div>
-      <div :class="faceConfig.eyes" :style="{ backgroundColor: faceConfig.color }"></div>
-    </div>
     <div
-      class="mt-3 w-8 h-1 rounded-full transition-colors duration-700"
-      :style="{ backgroundColor: faceConfig.color }"
-    ></div>
-  </div>
+        class="relative flex items-center justify-center overflow-hidden transition-all duration-700"
+        style="width: 100%; height: 100%"
+        :style="{
+            backgroundColor: faceConfig.bg,
+            boxShadow: `inset 0 0 40px rgba(0,0,0,0.10)`,
+        }"
+    >
+        <svg
+            viewBox="0 0 120 90"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[80%] h-[80%] transition-all duration-700"
+            :class="faceConfig.animClass"
+            style="overflow: visible"
+        >
+            <ellipse
+                v-if="state !== 'sleepy'"
+                cx="38"
+                :cy="eyeY"
+                :rx="faceConfig.eyeRx"
+                :ry="faceConfig.eyeRy"
+                fill="#1A1A1A"
+            />
+            <path
+                v-if="state === 'sleepy'"
+                :d="`M ${38 - 11} ${eyeY + 5} Q ${38} ${eyeY - 3} ${38 + 11} ${eyeY + 5}`"
+                stroke="#1A1A1A"
+                stroke-width="5.5"
+                stroke-linecap="round"
+                fill="none"
+            />
+
+            <ellipse
+                v-if="state !== 'sleepy'"
+                cx="82"
+                :cy="eyeY"
+                :rx="faceConfig.eyeRx"
+                :ry="faceConfig.eyeRy"
+                fill="#1A1A1A"
+            />
+            <path
+                v-if="state === 'sleepy'"
+                :d="`M ${82 - 11} ${eyeY + 5} Q ${82} ${eyeY - 3} ${82 + 11} ${eyeY + 5}`"
+                stroke="#1A1A1A"
+                stroke-width="5.5"
+                stroke-linecap="round"
+                fill="none"
+            />
+
+            <g v-if="state === 'angry'">
+                <path d="M 22 26 L 52 34" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round" fill="none" />
+                <path d="M 98 26 L 68 34" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round" fill="none" />
+            </g>
+
+            <g v-if="state === 'thirsty'">
+                <path d="M 103 15 Q 109 7 115 15 Q 115 24 103 24 Q 91 24 103 15" fill="#5BA4CF" opacity="0.75" />
+            </g>
+
+            <g v-if="state === 'sleepy'" opacity="0.45" font-family="sans-serif" font-weight="bold" fill="#1A1A1A">
+                <text x="93" y="32" font-size="9">z</text>
+                <text x="101" y="23" font-size="12">z</text>
+                <text x="110" y="13" font-size="15">z</text>
+            </g>
+
+            <path
+                v-if="state === 'happy'"
+                d="M 36 66 Q 60 86 84 66"
+                stroke="#1A1A1A"
+                stroke-width="5.5"
+                stroke-linecap="round"
+                fill="none"
+            />
+            <path
+                v-if="state === 'content'"
+                d="M 40 66 Q 60 78 80 66"
+                stroke="#1A1A1A"
+                stroke-width="5"
+                stroke-linecap="round"
+                fill="none"
+            />
+            <path
+                v-if="state === 'thirsty'"
+                d="M 36 74 Q 48 66 60 70 Q 72 74 84 68"
+                stroke="#1A1A1A"
+                stroke-width="5"
+                stroke-linecap="round"
+                fill="none"
+            />
+            <path
+                v-if="state === 'angry'"
+                d="M 36 78 Q 60 62 84 78"
+                stroke="#1A1A1A"
+                stroke-width="5.5"
+                stroke-linecap="round"
+                fill="none"
+            />
+            <path
+                v-if="state === 'sleepy'"
+                d="M 44 72 Q 60 75 76 72"
+                stroke="#1A1A1A"
+                stroke-width="4.5"
+                stroke-linecap="round"
+                fill="none"
+            />
+        </svg>
+    </div>
 </template>
 
 <script setup>
 import { computed } from "vue";
 
 const props = defineProps({
-  state: {
-    type: String,
-    default: "happy",
-  },
+    state: {
+        type: String,
+        default: "happy",
+    },
 });
 
-const styles = {
-  happy: { eyes: "rounded-full h-4 w-4", color: "#E2B059", glow: "0 0 24px #E2B05966", bounce: "animate-bounce" },
-  thirsty: { eyes: "rounded-t-full h-2 w-4 mt-2", color: "#6B6B6B", glow: "0 0 12px #6B6B6B33", bounce: "" },
-  angry: { eyes: "h-3 w-4 skew-y-12", color: "#BC4749", glow: "0 0 20px #BC474966", bounce: "animate-pulse" },
-  content: { eyes: "rounded-full h-3 w-4", color: "#386641", glow: "0 0 12px #38664133", bounce: "" },
-  sleepy: { eyes: "rounded-b-full h-1 w-4 mt-1", color: "#A0A0A0", glow: "none", bounce: "" },
+const emotionMap = {
+    happy: {
+        bg: "#E2B059",
+        eyeRx: 9,
+        eyeRy: 10,
+        eyeYOffset: 0,
+        animClass: "face-bounce",
+    },
+    content: {
+        bg: "#A8C5A0",
+        eyeRx: 8,
+        eyeRy: 8,
+        eyeYOffset: 0,
+        animClass: "",
+    },
+    thirsty: {
+        bg: "#B8D4E8",
+        eyeRx: 8,
+        eyeRy: 5,
+        eyeYOffset: 5,
+        animClass: "face-droop",
+    },
+    angry: {
+        bg: "#E8887A",
+        eyeRx: 9,
+        eyeRy: 7,
+        eyeYOffset: 0,
+        animClass: "face-shake",
+    },
+    sleepy: {
+        bg: "#C8C8D8",
+        eyeRx: 8,
+        eyeRy: 3,
+        eyeYOffset: 3,
+        animClass: "face-breathe",
+    },
 };
 
-const faceConfig = computed(() => styles[props.state] || styles.happy);
+const faceConfig = computed(() => emotionMap[props.state] || emotionMap.happy);
+const eyeY = computed(() => 36 + (faceConfig.value.eyeYOffset || 0));
 </script>
+
+<style scoped>
+@keyframes face-bounce {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-5px) scale(1.04);
+    }
+}
+.face-bounce {
+    animation: face-bounce 2.4s ease-in-out infinite;
+}
+
+@keyframes face-droop {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(4px);
+    }
+}
+.face-droop {
+    animation: face-droop 3s ease-in-out infinite;
+}
+
+@keyframes face-shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-2.5px) rotate(-0.6deg);
+    }
+    40% {
+        transform: translateX(2.5px) rotate(0.6deg);
+    }
+    60% {
+        transform: translateX(-2px);
+    }
+    80% {
+        transform: translateX(2px);
+    }
+}
+.face-shake {
+    animation: face-shake 0.45s ease-in-out infinite;
+}
+
+@keyframes face-breathe {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.018);
+    }
+}
+.face-breathe {
+    animation: face-breathe 4s ease-in-out infinite;
+}
+</style>

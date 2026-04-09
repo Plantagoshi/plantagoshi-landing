@@ -17,7 +17,21 @@
         "ctaSecondary": "See How It Works",
         "moisture": "Moisture",
         "light": "Light",
-        "temp": "Temp"
+        "temp": "Temp",
+        "emotions": {
+            "happy": "HAPPY",
+            "content": "CONTENT",
+            "thirsty": "THIRSTY",
+            "angry": "ANGRY",
+            "sleepy": "SLEEPY"
+        },
+        "quotes": {
+            "happy": "I'm living my best life right now.",
+            "content": "All good here. Don't mind me growing.",
+            "thirsty": "My roots are feeling a bit crunchy. Water?",
+            "angry": "It is WAY too hot. Maybe move me?",
+            "sleepy": "Shhh… dreaming of rain. Good night."
+        }
     },
     "features": {
         "label": "The Hardware",

@@ -16,7 +16,21 @@
         "ctaSecondary": "Voir comment ça marche",
         "moisture": "Humidité",
         "light": "Lumière",
-        "temp": "Temp"
+        "temp": "Temp",
+        "emotions": {
+            "happy": "HEUREUSE",
+            "content": "CONTENTE",
+            "thirsty": "ASSOIFFÉE",
+            "angry": "EN COLÈRE",
+            "sleepy": "ENDORMIE"
+        },
+        "quotes": {
+            "happy": "Je vis ma meilleure vie en ce moment.",
+            "content": "Tout va bien. Ne me dérange pas, je pousse.",
+            "thirsty": "Mes racines sont un peu craquantes. De l'eau ?",
+            "angry": "Il fait BEAUCOUP trop chaud. Tu peux me déplacer ?",
+            "sleepy": "Chut… je rêve de pluie. Bonne nuit."
+        }
     },
     "features": {
         "label": "Le Matériel",

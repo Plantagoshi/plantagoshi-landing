@@ -18,16 +18,19 @@
                         </svg>
                     </div>
                     <div class="mb-10" :class="i % 2 === 0 ? 'timeline-start text-end mr-4' : 'timeline-end ml-4'">
-                        <time class="font-mono italic">{{ t(`timeline.steps.${step}.date`) }}</time>
-                        <div class="text-lg font-black text-primary">{{ t(`timeline.steps.${step}.phase`) }}</div>
-                        <div class="grid grid-cols-2 items-center gap-3">
+                        <time class="font-mono italic">{{ t(`timeline.steps.${step.name}.date`) }}</time>
+                        <div class="text-lg font-black text-primary">{{ t(`timeline.steps.${step.name}.phase`) }}</div>
+                        <div class="grid md:grid-cols-2 gap-4 items-center">
                             <div
-                                class="w-full aspect-video bg-base-100 rounded-2xl flex text-center items-center justify-center text-neutral-400 text-xs border border-dashed border-base-300"
-                                :class="i % 2 === 0 ? 'order-start' : 'order-last'"
+                                class="relative overflow-hidden rounded-2xl shadow-lg border border-base-300 bg-base-100"
+                                :class="i % 2 === 0 ? 'order-start md:order-start' : 'order-start md:order-last'"
                             >
-                                📷 {{ t("timeline.photoPlaceholder") }} {{ t(`timeline.steps.${step}.phase`) }}
+                                <img
+                                    :src="step.img"
+                                    class="w-full h-40 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
+                                />
                             </div>
-                            <span>{{ t(`timeline.steps.${step}.note`) }}</span>
+                            <p class="text-neutral-600 leading-relaxed">{{ t(`timeline.steps.${step.name}.note`) }}</p>
                         </div>
                     </div>
                     <hr />
@@ -41,5 +44,18 @@
 import { useI18n } from "../composables/useI18n";
 const { t } = useI18n();
 
-const steps = ["prototype", "brain", "interface"];
+const steps = [
+    {
+        name: "prototype",
+        img: "images/pot_prototype.JPG",
+    },
+    {
+        name: "brain",
+        img: "images/pcb.JPG",
+    },
+    {
+        name: "interface",
+        img: "images/pot_face.JPG",
+    },
+];
 </script>

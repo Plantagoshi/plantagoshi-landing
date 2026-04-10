@@ -111,7 +111,10 @@
         "description": "We're currently in beta. Leave your email to be notified when Plantagoshi is ready to come home with you.",
         "placeholder": "your email",
         "cta": "Join Waitlist",
-        "note": "No spam. Just plant news and launch updates."
+        "note": "No spam. Just plant news and launch updates.",
+        "success": "You're on the list! We'll be in touch.",
+        "resetLabel": "Sign up with another email",
+        "loading": "Joining..."
     },
     "footer": {
         "copyright": "© 2024 Plantagoshi Labs — Student Project. Built with soil, code & caffeine.",

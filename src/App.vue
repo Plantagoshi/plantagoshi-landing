@@ -1,14 +1,14 @@
 <template>
-  <div class="min-h-screen" style="background-color: #f5f5f5; color: #1a1a1a">
-    <NavBar />
-    <HeroSection />
-    <FeaturesSection />
-    <AppShowcase />
-    <TimelineSection />
-    <TeamSection />
-    <WaitlistSection @submit="handleWaitlist" />
-    <FooterSection />
-  </div>
+    <div class="min-h-screen" style="background-color: #f5f5f5; color: #1a1a1a">
+        <NavBar />
+        <HeroSection />
+        <FeaturesSection />
+        <AppShowcase />
+        <TimelineSection />
+        <TeamSection />
+        <WaitlistSection />
+        <FooterSection />
+    </div>
 </template>
 
 <script setup>
@@ -20,8 +20,4 @@ import NavBar from "./components/NavBar.vue";
 import TeamSection from "./components/TeamSection.vue";
 import TimelineSection from "./components/TimelineSection.vue";
 import WaitlistSection from "./components/WaitlistSection.vue";
-
-function handleWaitlist(email) {
-  console.log("Waitlist signup:", email);
-}
 </script>

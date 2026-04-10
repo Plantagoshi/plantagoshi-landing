@@ -110,7 +110,10 @@
         "description": "Nous sommes actuellement en bêta. Laissez votre email pour être notifié quand Plantagoshi sera prêt à venir chez vous.",
         "placeholder": "votre email",
         "cta": "Rejoindre la liste",
-        "note": "Pas de spam. Que des nouvelles des plantes et des mises à jour."
+        "note": "Pas de spam. Que des nouvelles des plantes et des mises à jour.",
+        "success": "Vous êtes sur la liste ! Nous vous contacterons bientôt.",
+        "resetLabel": "S'inscrire avec un autre email",
+        "loading": "Inscription..."
     },
     "footer": {
         "copyright": "© 2024 Plantagoshi Labs — Projet Étudiant. Construit avec terre, code & café.",

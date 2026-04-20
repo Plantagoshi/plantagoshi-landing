@@ -6,7 +6,7 @@
       </span>
       <p>{{ t('footer.copyright') }}</p>
       <div class="flex gap-6">
-        <a href="#" class="hover:text-primary transition-colors">{{ t('footer.github') }}</a>
+        <a href="https://github.com/Plantagoshi" class="hover:text-primary transition-colors">{{ t('footer.github') }}</a>
         <a href="#" class="hover:text-primary transition-colors">{{ t('footer.instagram') }}</a>
         <a href="#" class="hover:text-primary transition-colors">{{ t('footer.demo') }}</a>
       </div>

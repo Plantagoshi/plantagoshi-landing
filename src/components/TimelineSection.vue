@@ -46,15 +46,19 @@ const { t } = useI18n();
 
 const steps = [
     {
+        name: "kickoff",
+        img: "images/pot_prototype.JPG",
+    },
+    {
         name: "prototype",
         img: "images/pot_prototype.JPG",
     },
     {
-        name: "brain",
+        name: "pcb",
         img: "images/pcb.JPG",
     },
     {
-        name: "interface",
+        name: "screen",
         img: "images/pot_face.JPG",
     },
     {

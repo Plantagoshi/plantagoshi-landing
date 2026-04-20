@@ -67,20 +67,25 @@
         "title": "From Wires to Wonder",
         "description": "A student project built over several months of iteration and learning.",
         "steps": {
+            "kickoff": {
+                "date": "September 2025",
+                "phase": "Project Start",
+                "note": "Beginning of the Plantagoshi project. Initial research into IoT plant monitoring, sensor selection, and early software architecture planning."
+            },
             "prototype": {
-                "date": "Project Start",
+                "date": "Mid-December 2025",
                 "phase": "V1 — The Prototype",
-                "note": "Proof of concept using breadboard, Arduino Uno, and external soil moisture probes. Focused on validating sensor data accuracy."
+                "note": "First working prototype with soil moisture, light, and temperature sensors. 3D-printed enclosure and Raspberry Pi as the main controller."
             },
-            "brain": {
-                "date": "Mid-Project",
-                "phase": "V2 — The Brain",
-                "note": "First AI integration. Custom PCB design. Replaced Arduino with ESP32 for WiFi connectivity and lower power consumption."
+            "pcb": {
+                "date": "Mid-February 2026",
+                "phase": "V2 — Custom PCB",
+                "note": "First custom PCB electrical design. Moved from Raspberry Pi to a dedicated board for better power efficiency and a smaller form factor."
             },
-            "interface": {
-                "date": "Final Version",
+            "screen": {
+                "date": "End of February 2026",
                 "phase": "V3 — The Living Interface",
-                "note": "Full 3D-printed enclosure with integrated OLED emotional display, polished app, and full API stack. Competition-ready."
+                "note": "Switched to an ESP32 with an integrated screen. The pot now displays its mood directly, with expressive faces reacting to sensor data in real time."
             },
             "osentreprendre": {
                 "date": "April 1, 2026",

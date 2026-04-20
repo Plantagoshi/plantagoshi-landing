@@ -66,20 +66,25 @@
         "title": "Des Fils au Merveille",
         "description": "Un projet étudiant construit sur plusieurs mois d'itération et d'apprentissage.",
         "steps": {
+            "kickoff": {
+                "date": "Septembre 2025",
+                "phase": "Début du Projet",
+                "note": "Lancement du projet Plantagoshi. Recherche initiale sur la surveillance IoT des plantes, sélection des capteurs et planification de l'architecture logicielle."
+            },
             "prototype": {
-                "date": "Début du Projet",
+                "date": "Mi-décembre 2025",
                 "phase": "V1 — Le Prototype",
-                "note": "Preuve de concept avec breadboard, Arduino Uno et sondes d'humidité externes. Axé sur la validation de la précision des données des capteurs."
+                "note": "Premier prototype fonctionnel avec capteurs d'humidité du sol, de lumière et de température. Boîtier imprimé en 3D et Raspberry Pi comme contrôleur principal."
             },
-            "brain": {
-                "date": "Milieu du Projet",
-                "phase": "V2 — Le Cerveau",
-                "note": "Première intégration IA. Conception PCB personnalisée. Remplacement de l'Arduino par un ESP32 pour la connectivité WiFi et une consommation réduite."
+            "pcb": {
+                "date": "Mi-février 2026",
+                "phase": "V2 — PCB Sur Mesure",
+                "note": "Première conception électrique de PCB sur mesure. Passage du Raspberry Pi à une carte dédiée pour une meilleure efficacité énergétique et un format plus compact."
             },
-            "interface": {
-                "date": "Version Finale",
+            "screen": {
+                "date": "Fin février 2026",
                 "phase": "V3 — L'Interface Vivante",
-                "note": "Boîtier 3D complet avec écran OLED émotionnel intégré, application polie et pile API complète. Prêt pour la compétition."
+                "note": "Passage à un ESP32 avec écran intégré. Le pot affiche maintenant son humeur directement, avec des expressions réagissant aux données des capteurs en temps réel."
             },
             "osentreprendre": {
                 "date": "1er avril 2026",

@@ -15,17 +15,30 @@
         </ul>
       </div>
 
-      <!-- App Screenshot Placeholder -->
+      <!-- App Screenshots Carousel -->
       <div class="flex-1 w-full max-w-xs">
-        <div
-          class="w-full aspect-9/18 bg-neutral-900 rounded-4xl border-4 border-neutral-700 flex items-center justify-center shadow-2xl relative overflow-hidden"
-        >
-          <div class="absolute inset-0 `bg-linear-to-b from-neutral-800 to-neutral-900 opacity-80"></div>
-          <div class="relative z-10 text-center text-neutral-400 px-4">
-            <div class="text-5xl mb-3">📱</div>
-            <p class="text-sm font-medium">{{ t('appShowcase.screenshot') }}</p>
-            <p class="text-xs mt-1 text-neutral-500">{{ t('appShowcase.screenshotSubtitle') }}</p>
+        <div class="overflow-hidden rounded-4xl">
+          <div
+            class="flex transition-transform duration-500 ease-in-out"
+            :style="{ transform: `translateX(-${activeSlide * 100}%)` }"
+          >
+            <div v-for="(image, index) in images" :key="index" class="w-full shrink-0">
+              <img
+                :src="image.src"
+                :alt="image.alt"
+                class="w-full rounded-4xl border-4 border-neutral-700 shadow-2xl object-cover"
+              />
+            </div>
           </div>
+        </div>
+        <div class="flex justify-center gap-2 py-4">
+          <button
+            v-for="(image, index) in images"
+            :key="index"
+            class="w-2.5 h-2.5 rounded-full transition-colors duration-300"
+            :class="activeSlide === index ? 'bg-primary' : 'bg-neutral-300'"
+            @click="goToSlide(index)"
+          />
         </div>
       </div>
     </div>
@@ -33,7 +46,43 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import { useI18n } from "../composables/useI18n";
 
 const { t } = useI18n();
+
+const activeSlide = ref(0);
+let intervalId = null;
+
+const base = import.meta.env.BASE_URL;
+
+const images = [
+  { src: `${base}images/app/home.PNG`, alt: "Plant dashboard" },
+  { src: `${base}images/app/details.PNG`, alt: "Plant details and sensors" },
+  { src: `${base}images/app/stats.PNG`, alt: "Temperature statistics" },
+  { src: `${base}images/app/chat.PNG`, alt: "Chat with your plant" },
+  { src: `${base}images/app/ia.PNG`, alt: "AI personalities" },
+  { src: `${base}images/app/create.PNG`, alt: "Create a new plant" },
+  { src: `${base}images/app/settings.PNG`, alt: "Profile and settings" },
+];
+
+function startAutoPlay() {
+  intervalId = setInterval(() => {
+    activeSlide.value = (activeSlide.value + 1) % images.length;
+  }, 4000);
+}
+
+function goToSlide(index) {
+  activeSlide.value = index;
+  clearInterval(intervalId);
+  startAutoPlay();
+}
+
+onMounted(() => {
+  startAutoPlay();
+});
+
+onUnmounted(() => {
+  clearInterval(intervalId);
+});
 </script>

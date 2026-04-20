@@ -51,17 +51,15 @@
     },
     "appShowcase": {
         "label": "Le Logiciel",
-        "title": "L'App : la Voix de Votre Plante",
-        "description": "L'application Plantagoshi ne se limite pas aux graphiques — c'est là où vous et votre plante avez de vraies conversations.",
+        "title": "Surveillez, Discutez et Prenez Soin — Tout en Une App",
+        "description": "L'application compagnon Plantagoshi vous donne une visibilité complète sur l'environnement de votre plante et vous permet d'interagir avec elle via des conversations propulsées par l'IA.",
         "features": [
-            "Suivi des capteurs en temps réel avec des \"Courbes Organiques\" fluides",
-            "Interface de chat alimentée par notre API PlantAI",
-            "UI pilotée par les émotions qui change de couleur selon l'humeur de votre plante",
-            "Tableau de bord multi-plantes pour gérer toute votre collection",
-            "Intégration maison connectée via API développeur"
-        ],
-        "screenshot": "Capture d'écran de l'app à venir",
-        "screenshotSubtitle": "Remplacer par votre démonstration"
+            "Données capteurs en temps réel : température, luminosité et niveau d'eau",
+            "Graphiques historiques sur 24 heures avec valeurs min, moyenne et max",
+            "Chat IA pour communiquer avec votre plante par texte ou audio",
+            "Plusieurs personnalités IA pour donner une voix unique à chaque plante",
+            "Tableau de bord multi-plantes pour gérer tous vos pots connectés"
+        ]
     },
     "timeline": {
         "label": "Notre Parcours",

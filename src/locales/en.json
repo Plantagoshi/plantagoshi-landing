@@ -52,17 +52,15 @@
     },
     "appShowcase": {
         "label": "The Software",
-        "title": "The App: Your Plant's Voice",
-        "description": "The Plantagoshi app doesn't just show charts — it's where you and your plant have actual conversations.",
+        "title": "Monitor, Chat, and Care — All in One App",
+        "description": "The Plantagoshi companion app gives you full visibility on your plant's environment and lets you interact with it through AI-powered conversations.",
         "features": [
-            "Real-time sensor tracking with smooth \"Organic Curves\"",
-            "Chat interface powered by our PlantAI API",
-            "Emotion-driven UI that changes color with your plant's mood",
-            "Multi-plant dashboard to manage your whole collection",
-            "Smart home integration via developer API"
-        ],
-        "screenshot": "App screenshot coming soon",
-        "screenshotSubtitle": "Replace with your actual app demo"
+            "Real-time sensor data: temperature, luminosity, and water level",
+            "24-hour historical graphs with min, average, and max values",
+            "AI chat to communicate with your plant via text or audio",
+            "Multiple AI personalities to give each plant a unique voice",
+            "Multi-plant dashboard to manage all your connected pots"
+        ]
     },
     "timeline": {
         "label": "Our Journey",

@@ -16,8 +16,8 @@
                     {{ t("hero.description") }}
                 </p>
 
-                <div class="badge badge-secondary gap-2">
-                    <Trophy class="w-4 h-4" />
+                <div class="badge badge-secondary gap-2 h-auto py-1.5 whitespace-normal text-left leading-snug">
+                    <Trophy class="w-4 h-4 shrink-0" />
                     {{ t("hero.badge") }}
                 </div>
 

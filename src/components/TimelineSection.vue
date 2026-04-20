@@ -57,5 +57,9 @@ const steps = [
         name: "interface",
         img: "images/pot_face.JPG",
     },
+    {
+        name: "osentreprendre",
+        img: "images/timeline/osentreprendre_local.jpg",
+    },
 ];
 </script>

@@ -130,6 +130,10 @@
         "resetLabel": "Envoyer un autre message",
         "loading": "Envoi..."
     },
+    "notFound": {
+        "message": "Cette page n'existe pas. Votre plante s'est peut-être égarée ?",
+        "cta": "Retour à l'accueil"
+    },
     "footer": {
         "copyright": "© 2026 Plantagoshi — Projet Étudiant.",
         "github": "GitHub",

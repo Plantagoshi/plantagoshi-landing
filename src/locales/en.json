@@ -131,6 +131,10 @@
         "resetLabel": "Send another message",
         "loading": "Sending..."
     },
+    "notFound": {
+        "message": "This page doesn't exist. Maybe your plant wandered off?",
+        "cta": "Back to Home"
+    },
     "footer": {
         "copyright": "© 2026 Plantagoshi — Student Project.",
         "github": "GitHub",

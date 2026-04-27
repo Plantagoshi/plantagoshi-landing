@@ -4,7 +4,8 @@
         "app": "The App",
         "journey": "Our Journey",
         "team": "Team",
-        "adopt": "Adopt Now"
+        "adopt": "Adopt Now",
+        "contact": "Contact Us"
     },
     "hero": {
         "mood": "My mood:",
@@ -13,7 +14,7 @@
         "subtitle": "Are you listening?",
         "description": "Plantagoshi is a smart IoT planter with an AI soul — it senses your plant's health and expresses its mood in real time through an integrated screen and a companion app.",
         "badge": "Winner — 28th Défi OSEntreprendre 2026, Student Category (MRC de Pierre-De Saurel)",
-        "cta": "Join the Waitlist",
+        "cta": "Contact Us",
         "ctaSecondary": "See How It Works",
         "moisture": "Moisture",
         "light": "Light",
@@ -114,15 +115,21 @@
             }
         }
     },
-    "waitlist": {
-        "title": "Ready to give your plant a voice?",
-        "description": "We're currently in beta. Leave your email to be notified when Plantagoshi is ready to come home with you.",
-        "placeholder": "your email",
-        "cta": "Join Waitlist",
-        "note": "No spam. Just plant news and launch updates.",
-        "success": "You're on the list! We'll be in touch.",
-        "resetLabel": "Sign up with another email",
-        "loading": "Joining..."
+    "contact": {
+        "title": "Get in Touch",
+        "description": "Have a question about Plantagoshi? Want to collaborate or learn more? Drop us a message.",
+        "nameLabel": "Name",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you{'@'}example.com",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Tell us what's on your mind...",
+        "cta": "Send Message",
+        "note": "We'll get back to you as soon as we can.",
+        "successTitle": "Message Sent!",
+        "successMessage": "Thanks for reaching out. We'll get back to you soon.",
+        "resetLabel": "Send another message",
+        "loading": "Sending..."
     },
     "footer": {
         "copyright": "© 2026 Plantagoshi — Student Project.",

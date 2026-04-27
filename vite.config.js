@@ -7,8 +7,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/plantagoshi-landing/',
-  plugins: [vue(), vueDevTools(), tailwindcss()],
+plugins: [vue(), vueDevTools(), tailwindcss()],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

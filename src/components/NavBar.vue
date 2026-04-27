@@ -1,18 +1,18 @@
 <template>
     <nav class="navbar bg-base-200/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-base-200">
         <div class="container max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-2">
+            <router-link to="/" class="flex items-center gap-2">
                 <div class="bg-primary text-white p-2 rounded-sm">
                     <Leaf class="w-5 h-5" />
                 </div>
                 <span class="text-xl font-bold font-display tracking-tight">Plantagoshi</span>
-            </a>
+            </router-link>
 
             <div class="hidden md:flex gap-8 font-medium text-sm">
-                <a href="#features" class="hover:text-primary transition-colors">{{ t("nav.features") }}</a>
-                <a href="#mobileApp" class="hover:text-primary transition-colors">{{ t("nav.app") }}</a>
-                <a href="#journey" class="hover:text-primary transition-colors">{{ t("nav.journey") }}</a>
-                <a href="#team" class="hover:text-primary transition-colors">{{ t("nav.team") }}</a>
+                <router-link to="/#features" class="hover:text-primary transition-colors">{{ t("nav.features") }}</router-link>
+                <router-link to="/#mobileApp" class="hover:text-primary transition-colors">{{ t("nav.app") }}</router-link>
+                <router-link to="/#journey" class="hover:text-primary transition-colors">{{ t("nav.journey") }}</router-link>
+                <router-link to="/#team" class="hover:text-primary transition-colors">{{ t("nav.team") }}</router-link>
             </div>
 
             <div class="flex items-center gap-4">
@@ -32,10 +32,10 @@
                         FR
                     </button>
                 </div>
-                <BaseButton href="#waitlist" variant="primary" size="sm">
-                    {{ t("nav.adopt") }}
+                <router-link to="/contact" class="btn btn-primary btn-sm">
+                    {{ t("nav.contact") }}
                     <Leaf class="w-4 h-4" />
-                </BaseButton>
+                </router-link>
             </div>
         </div>
     </nav>
@@ -44,7 +44,6 @@
 <script setup>
 import { Leaf } from "lucide-vue-next";
 import { useI18n } from "../composables/useI18n";
-import BaseButton from "./BaseButton.vue";
 
 const { t, currentLocale, toggleLocale } = useI18n();
 </script>

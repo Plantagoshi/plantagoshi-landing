@@ -22,9 +22,9 @@
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <BaseButton href="#waitlist" variant="primary" size="lg">
+                    <router-link to="/contact" class="btn btn-primary btn-lg">
                         {{ t("hero.cta") }}
-                    </BaseButton>
+                    </router-link>
                     <BaseButton href="#features" variant="outline" size="lg">
                         {{ t("hero.ctaSecondary") }}
                         <ArrowDown class="w-6 h-6" />

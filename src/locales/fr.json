@@ -4,7 +4,8 @@
         "app": "L'App",
         "journey": "Notre Parcours",
         "team": "L'Équipe",
-        "adopter": "Adopter"
+        "adopter": "Adopter",
+        "contact": "Nous Contacter"
     },
     "hero": {
         "mood": "Mon humeur :",
@@ -12,7 +13,7 @@
         "subtitle": "Êtes-vous à l'écoute ?",
         "description": "Plantagoshi est un pot connecté intelligent avec une âme IA — il surveille la santé de votre plante et exprime son humeur en temps réel via un écran intégré et une application compagnon.",
         "badge": "Lauréat — 28e Défi OSEntreprendre 2026, Volet Étudiant (MRC de Pierre-De Saurel)",
-        "cta": "Rejoindre la liste d'attente",
+        "cta": "Nous contacter",
         "ctaSecondary": "Voir comment ça marche",
         "moisture": "Humidité",
         "light": "Lumière",
@@ -113,15 +114,21 @@
             }
         }
     },
-    "waitlist": {
-        "title": "Prêt à donner une voix à votre plante ?",
-        "description": "Nous sommes actuellement en bêta. Laissez votre email pour être notifié quand Plantagoshi sera prêt à venir chez vous.",
-        "placeholder": "votre email",
-        "cta": "Rejoindre la liste",
-        "note": "Pas de spam. Que des nouvelles des plantes et des mises à jour.",
-        "success": "Vous êtes sur la liste ! Nous vous contacterons bientôt.",
-        "resetLabel": "S'inscrire avec un autre email",
-        "loading": "Inscription..."
+    "contact": {
+        "title": "Contactez-nous",
+        "description": "Une question sur Plantagoshi ? Envie de collaborer ou d'en savoir plus ? Écrivez-nous.",
+        "nameLabel": "Nom",
+        "namePlaceholder": "Votre nom",
+        "emailLabel": "Courriel",
+        "emailPlaceholder": "vous{'@'}exemple.com",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Dites-nous ce qui vous intéresse...",
+        "cta": "Envoyer le message",
+        "note": "Nous vous répondrons dès que possible.",
+        "successTitle": "Message envoyé !",
+        "successMessage": "Merci de nous avoir contactés. Nous reviendrons vers vous bientôt.",
+        "resetLabel": "Envoyer un autre message",
+        "loading": "Envoi..."
     },
     "footer": {
         "copyright": "© 2026 Plantagoshi — Projet Étudiant.",

@@ -88,10 +88,21 @@
                 "phase": "V3 — The Living Interface",
                 "note": "Switched to an ESP32 with an integrated screen. The pot now displays its mood directly, with expressive faces reacting to sensor data in real time."
             },
-            "osentreprendre": {
+            "osentreprendreLocal": {
                 "date": "April 1, 2026",
                 "phase": "Winner — 28th Défi OSEntreprendre",
-                "note": "Plantagoshi was selected as the winning project in the Student category at the 28th Défi OSEntreprendre, local level for the MRC de Pierre-De Saurel. Now advancing to the regional Montérégie level."
+                "note": "Plantagoshi was selected as the winning project in the Student category at the 28th Défi OSEntreprendre, local level for the MRC de Pierre-De Saurel. Now advancing to the regional Montérégie level.",
+                "links": {
+                    "sorelTracyInfo": "Sorel-Tracy Info"
+                }
+            },
+            "osentreprendreRegional": {
+                "date": "April 23, 2026",
+                "phase": "Winner — 28th Défi OSEntreprendre",
+                "note": "Plantagoshi was selected as the winning project in the Student category at the 28th Défi OSEntreprendre, regional level for the Montérégie region. Now advancing to the national Quebec level.",
+                "links": {
+                    "sorelTracyInfo": "Sorel-Tracy Info"
+                }
             }
         },
         "photoPlaceholder": "Add a photo of"

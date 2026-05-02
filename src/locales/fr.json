@@ -87,10 +87,21 @@
                 "phase": "V3 — L'Interface Vivante",
                 "note": "Passage à un ESP32 avec écran intégré. Le pot affiche maintenant son humeur directement, avec des expressions réagissant aux données des capteurs en temps réel."
             },
-            "osentreprendre": {
+            "osentreprendreLocal": {
                 "date": "1er avril 2026",
                 "phase": "Lauréat — 28e Défi OSEntreprendre",
-                "note": "Plantagoshi a été sélectionné comme projet lauréat dans le volet Étudiant du 28e Défi OSEntreprendre, échelon local de la MRC de Pierre-De Saurel. En route vers l'échelon régional Montérégie."
+                "note": "Plantagoshi a été sélectionné comme projet lauréat dans le volet Étudiant du 28e Défi OSEntreprendre, échelon local de la MRC de Pierre-De Saurel. En route vers l'échelon régional Montérégie.",
+                "links": {
+                    "sorelTracyInfo": "Sorel-Tracy Info"
+                }
+            },
+            "osentreprendreRegional": {
+                "date": "23 avril 2026",
+                "phase": "Lauréat — 28e Défi OSEntreprendre",
+                "note": "Plantagoshi a été sélectionné comme projet lauréat dans le volet Étudiant du 28e Défi OSEntreprendre, échelon régional de la Montérégie. En route vers l'échelon national à Québec.",
+                "links": {
+                    "sorelTracyInfo": "Sorel-Tracy Info"
+                }
             }
         },
         "photoPlaceholder": "Ajouter une photo de"

@@ -41,7 +41,7 @@
                             >
                                 <img
                                     :src="step.img"
-                                    class="w-full h-40 md:h-72 object-cover hover:scale-105 transition-transform duration-500"
+                                    class="w-40 h-40 md:h-72 md:w-72 object-cover hover:scale-105 transition-transform duration-200"
                                 />
                             </div>
                             <div>
@@ -74,25 +74,19 @@
 <script setup>
 import { ExternalLink } from 'lucide-vue-next';
 import { useI18n } from '../composables/useI18n';
-import BaseButton from './BaseButton.vue';
+import BaseButton from '@/components/BaseButton.vue';
 const { t } = useI18n();
 
 const steps = [
     {
-        name: 'kickoff',
-        img: 'images/pot_prototype.JPG',
-    },
-    {
-        name: 'prototype',
-        img: 'images/pot_prototype.JPG',
-    },
-    {
-        name: 'pcb',
-        img: 'images/pcb.JPG',
-    },
-    {
-        name: 'screen',
-        img: 'images/pot_face.JPG',
+        name: 'osentreprendreRegional',
+        img: 'images/timeline/osentreprendre_regional.jpg',
+        links: [
+            {
+                label: 'sorelTracyInfo',
+                url: 'https://soreltracy.info/2026/04/29/plantagoshi-deux-etudiants-du-cegep-de-sorel-tracy-brillent-a-osentreprendre-monteregie-et-visent-le-national/',
+            },
+        ],
     },
     {
         name: 'osentreprendreLocal',
@@ -105,14 +99,20 @@ const steps = [
         ],
     },
     {
-        name: 'osentreprendreRegional',
-        img: 'images/timeline/osentreprendre_regional.jpg',
-        links: [
-            {
-                label: 'sorelTracyInfo',
-                url: 'https://soreltracy.info/2026/04/29/plantagoshi-deux-etudiants-du-cegep-de-sorel-tracy-brillent-a-osentreprendre-monteregie-et-visent-le-national/',
-            },
-        ],
+        name: 'screen',
+        img: 'images/pot_face.JPG',
+    },
+    {
+        name: 'pcb',
+        img: 'images/pcb.JPG',
+    },
+    {
+        name: 'prototype',
+        img: 'images/pot_prototype.JPG',
+    },
+    {
+        name: 'kickoff',
+        img: 'images/hub_profil.jpeg',
     },
 ];
 </script>

@@ -1,5 +1,7 @@
 <template>
-    <nav class="navbar bg-base-200/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-base-200">
+    <nav
+        class="navbar bg-base-200/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-base-200"
+    >
         <div class="container max-w-6xl mx-auto px-6 flex justify-between items-center">
             <router-link to="/" class="flex items-center gap-2">
                 <div class="bg-primary text-white p-2 rounded-sm">
@@ -9,10 +11,12 @@
             </router-link>
 
             <div class="hidden md:flex gap-8 font-medium text-sm">
-                <router-link to="/#features" class="hover:text-primary transition-colors">{{ t("nav.features") }}</router-link>
-                <router-link to="/#mobileApp" class="hover:text-primary transition-colors">{{ t("nav.app") }}</router-link>
-                <router-link to="/#journey" class="hover:text-primary transition-colors">{{ t("nav.journey") }}</router-link>
-                <router-link to="/#team" class="hover:text-primary transition-colors">{{ t("nav.team") }}</router-link>
+                <router-link to="/timeline" class="hover:text-primary transition-colors">{{
+                    t('nav.journey')
+                }}</router-link>
+                <router-link to="/contact" class="hover:text-primary transition-colors">{{
+                    t('nav.contact')
+                }}</router-link>
             </div>
 
             <div class="flex items-center gap-4">
@@ -32,18 +36,14 @@
                         FR
                     </button>
                 </div>
-                <router-link to="/contact" class="btn btn-primary btn-sm">
-                    {{ t("nav.contact") }}
-                    <Leaf class="w-4 h-4" />
-                </router-link>
             </div>
         </div>
     </nav>
 </template>
 
 <script setup>
-import { Leaf } from "lucide-vue-next";
-import { useI18n } from "../composables/useI18n";
+import { Leaf } from 'lucide-vue-next';
+import { useI18n } from '../composables/useI18n';
 
 const { t, currentLocale, toggleLocale } = useI18n();
 </script>

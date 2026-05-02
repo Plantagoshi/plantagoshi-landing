@@ -12,7 +12,10 @@
         "title": "Votre plante a des sentiments.",
         "subtitle": "Êtes-vous à l'écoute ?",
         "description": "Plantagoshi est un pot connecté intelligent avec une âme IA — il surveille la santé de votre plante et exprime son humeur en temps réel via un écran intégré et une application compagnon.",
-        "badge": "Lauréat — 28e Défi OSEntreprendre 2026, Volet Étudiant (MRC de Pierre-De Saurel)",
+        "osentreprendre": {
+            "local": "Lauréat Local - 28e Défi OSEntreprendre 2026",
+            "regional": "Lauréat Régional - 28e Défi OSEntreprendre 2026"
+        },
         "cta": "Nous contacter",
         "ctaSecondary": "Voir comment ça marche",
         "moisture": "Humidité",

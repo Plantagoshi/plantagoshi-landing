@@ -14,6 +14,10 @@
         "subtitle": "Are you listening?",
         "description": "Plantagoshi is a smart IoT planter with an AI soul — it senses your plant's health and expresses its mood in real time through an integrated screen and a companion app.",
         "badge": "Winner — 28th Défi OSEntreprendre 2026, Student Category (MRC de Pierre-De Saurel)",
+        "osentreprendre": {
+            "local": "Local Winner - 28th Défi OSEntreprendre 2026",
+            "regional": "Regional Winner - 28th Défi OSEntreprendre 2026"
+        },
         "cta": "Contact Us",
         "ctaSecondary": "See How It Works",
         "moisture": "Moisture",

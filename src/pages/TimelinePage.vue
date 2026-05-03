@@ -1,7 +1,7 @@
 <template>
     <section id="journey" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="mb-12">
+            <div class="mb-12" data-aos="fade-down">
                 <span class="text-primary font-bold text-sm uppercase tracking-widest">{{
                     t('timeline.label')
                 }}</span>
@@ -9,7 +9,7 @@
                 <p class="text-neutral-500">{{ t('timeline.description') }}</p>
             </div>
             <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                <li v-for="(step, i) in steps" :key="step">
+                <li v-for="(step, i) in steps" :key="step" data-aos="fade-up" :data-aos-delay="i * 100">
                     <div class="timeline-middle">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

@@ -16,28 +16,57 @@
       </div>
 
       <!-- App Screenshots Carousel -->
-      <div class="flex-1 w-full max-w-xs">
-        <div class="overflow-hidden rounded-4xl">
-          <div
-            class="flex transition-transform duration-500 ease-in-out"
-            :style="{ transform: `translateX(-${activeSlide * 100}%)` }"
+      <div class="flex-1 flex flex-col items-center">
+        <div class="flex items-center gap-3">
+          <button
+            class="btn btn-circle btn-sm btn-ghost text-neutral-500 hover:text-primary"
+            @click="prevSlide"
+            aria-label="Previous screenshot"
           >
-            <div v-for="(image, index) in images" :key="index" class="w-full shrink-0">
-              <img
-                :src="image.src"
-                :alt="image.alt"
-                class="w-full rounded-4xl border-4 border-neutral-700 shadow-2xl object-cover"
-              />
+            <ChevronLeft :size="20" />
+          </button>
+
+          <div
+            class="mockup-phone scale-75 origin-center -my-16"
+            @touchstart="onTouchStart"
+            @touchend="onTouchEnd"
+          >
+            <div class="mockup-phone-camera"></div>
+            <div class="mockup-phone-display">
+              <div class="overflow-hidden w-full h-full">
+                <div
+                  class="flex transition-transform duration-500 ease-in-out h-full"
+                  :style="{ transform: `translateX(-${activeSlide * 100}%)` }"
+                >
+                  <div v-for="(image, index) in images" :key="index" class="w-full h-full shrink-0">
+                    <img
+                      :src="image.src"
+                      :alt="image.alt"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <button
+            class="btn btn-circle btn-sm btn-ghost text-neutral-500 hover:text-primary"
+            @click="nextSlide"
+            aria-label="Next screenshot"
+          >
+            <ChevronRight :size="20" />
+          </button>
         </div>
-        <div class="flex justify-center gap-2 py-4">
+
+        <div class="flex justify-center gap-2">
           <button
             v-for="(image, index) in images"
             :key="index"
-            class="w-2.5 h-2.5 rounded-full transition-colors duration-300"
-            :class="activeSlide === index ? 'bg-primary' : 'bg-neutral-300'"
+            class="w-3 h-3 rounded-full transition-colors duration-300"
+            :class="activeSlide === index ? 'bg-primary scale-125' : 'bg-neutral-300'"
             @click="goToSlide(index)"
+            :aria-label="`Go to screenshot ${index + 1}`"
           />
         </div>
       </div>
@@ -47,6 +76,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { ChevronLeft, ChevronRight } from "lucide-vue-next";
 import { useI18n } from "../composables/useI18n";
 
 const { t } = useI18n();
@@ -66,16 +96,44 @@ const images = [
   { src: `${base}images/app/settings.PNG`, alt: "Profile and settings" },
 ];
 
+let touchStartX = 0;
+
 function startAutoPlay() {
   intervalId = setInterval(() => {
     activeSlide.value = (activeSlide.value + 1) % images.length;
   }, 4000);
 }
 
-function goToSlide(index) {
-  activeSlide.value = index;
+function resetAutoPlay() {
   clearInterval(intervalId);
   startAutoPlay();
+}
+
+function goToSlide(index) {
+  activeSlide.value = index;
+  resetAutoPlay();
+}
+
+function prevSlide() {
+  activeSlide.value = (activeSlide.value - 1 + images.length) % images.length;
+  resetAutoPlay();
+}
+
+function nextSlide() {
+  activeSlide.value = (activeSlide.value + 1) % images.length;
+  resetAutoPlay();
+}
+
+function onTouchStart(e) {
+  touchStartX = e.touches[0].clientX;
+}
+
+function onTouchEnd(e) {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) nextSlide();
+    else prevSlide();
+  }
 }
 
 onMounted(() => {

@@ -26,7 +26,7 @@
                     </div>
                     <div
                         class="mb-10"
-                        :class="i % 2 === 0 ? 'timeline-start text-end mr-4' : 'timeline-end ml-4'"
+                        :class="i % 2 === 0 ? 'timeline-start md:text-end ml-4 md:ml-0 md:mr-4' : 'timeline-end ml-4'"
                     >
                         <time class="font-mono italic">{{
                             t(`timeline.steps.${step.name}.date`)
@@ -36,12 +36,12 @@
                         </div>
                         <div class="grid md:grid-cols-2 gap-4 mt-3 items-center">
                             <div
-                                class="relative overflow-hidden rounded-2xl shadow-lg border border-base-300 bg-base-100 order-start"
+                                class="relative overflow-hidden rounded-2xl shadow-lg border border-base-300 bg-base-100 order-start mx-auto md:mx-0"
                                 :class="i % 2 === 0 ? '' : 'md:order-last'"
                             >
                                 <img
                                     :src="step.img"
-                                    class="w-40 h-40 md:h-72 md:w-72 object-cover hover:scale-105 transition-transform duration-200"
+                                    class="w-full h-48 md:h-72 md:w-72 object-cover hover:scale-105 transition-transform duration-200"
                                 />
                             </div>
                             <div>

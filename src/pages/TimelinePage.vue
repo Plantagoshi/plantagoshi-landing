@@ -1,5 +1,5 @@
 <template>
-    <section id="journey" class="py-24 px-6">
+    <section class="pt-24 pb-16 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="mb-12" data-aos="fade-down">
                 <span class="text-primary font-bold text-sm uppercase tracking-widest">{{

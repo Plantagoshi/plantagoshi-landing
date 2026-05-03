@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-36 pb-20 px-6 overflow-hidden">
+    <section class="pt-24 pb-16 px-6 overflow-hidden">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-4">
                 <div class="badge badge-outline badge-primary gap-2">

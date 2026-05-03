@@ -1,5 +1,5 @@
 <template>
-    <section id="waitlist" class="py-24 px-6">
+    <section id="waitlist" class="py-16 px-6">
         <div
             class="max-w-4xl mx-auto bg-neutral-900 rounded-4xl p-8 md:p-16 text-center text-white relative overflow-hidden"
         >

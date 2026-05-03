@@ -1,7 +1,7 @@
 <template>
   <section id="features" class="py-16 bg-white rounded-4xl mx-4 md:mx-10 shadow-sm">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-16 space-y-3">
+      <div class="text-center mb-8 space-y-3">
         <span class="text-primary font-bold text-sm uppercase tracking-widest">{{ t('features.label') }}</span>
         <h2 class="text-4xl font-bold font-display">{{ t('features.title') }}</h2>
         <p class="text-neutral-500 max-w-2xl mx-auto">
@@ -9,7 +9,7 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3">
         <div class="card bg-base-200 hover:bg-base-300 transition-colors">
           <div class="card-body">
             <Microscope class="text-primary w-10 h-10 mb-3" />

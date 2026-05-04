@@ -59,7 +59,7 @@
           </button>
         </div>
 
-        <div class="flex justify-center gap-2">
+        <div class="flex justify-center gap-2 mt-4 md:mt-0">
           <button
             v-for="(image, index) in images"
             :key="index"

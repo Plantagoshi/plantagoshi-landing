@@ -9,12 +9,11 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-2 justify-center">
+      <div class="flex flex-wrap justify-center gap-2">
         <div
           v-for="(member, i) in members"
           :key="i"
-          class="card bg-base-200 hover:scale-110 transition-all duration-200"
-          :class="{ 'col-span-2 md:col-span-1 max-w-xs mx-auto w-full': i === members.length - 1 && members.length % 2 !== 0 }"
+          class="card bg-base-200 hover:scale-110 transition-all duration-200 w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.375rem)]"
         >
           <div class="card-body items-center text-center p-6">
             <div class="avatar">

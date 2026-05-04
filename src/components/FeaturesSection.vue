@@ -9,7 +9,7 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3">
+      <div class="grid md:grid-cols-3 gap-2">
         <div class="card bg-base-200 hover:bg-base-300 transition-colors">
           <div class="card-body">
             <Microscope class="text-primary w-10 h-10 mb-3" />

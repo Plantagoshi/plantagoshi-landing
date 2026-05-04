@@ -9,7 +9,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 justify-center">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-2 justify-center">
         <div
           v-for="(member, i) in members"
           :key="i"

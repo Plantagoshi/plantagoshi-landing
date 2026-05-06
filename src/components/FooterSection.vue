@@ -8,12 +8,14 @@
             <span class="font-bold font-display flex items-center gap-2">
                 <Leaf class="w-4 h-4 text-primary" /> Plantagoshi
             </span>
-            <p>{{ t('footer.copyright') }}</p>
-            <div class="flex gap-6">
+            <div class="flex gap-4 text-xs">
                 <router-link
                     to="/privacy"
                     class="hover:text-primary transition-colors"
                 >{{ t('footer.privacy') }}</router-link>
+            </div>
+            <p>{{ t('footer.copyright') }}</p>
+            <div class="flex gap-6">
                 <a
                     href="https://github.com/Plantagoshi"
                     target="_blank"

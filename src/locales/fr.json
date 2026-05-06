@@ -153,6 +153,75 @@
         "copyright": "© 2026 Plantagoshi — Projet Étudiant.",
         "github": "GitHub",
         "instagram": "Instagram",
-        "demo": "Vidéo Démo"
+        "demo": "Vidéo Démo",
+        "privacy": "Politique de confidentialité"
+    },
+    "cookie": {
+        "message": "Nous utilisons des témoins (cookies) pour améliorer votre expérience. Aucun suivi n'est actif par défaut.",
+        "accept": "Tout accepter",
+        "reject": "Refuser",
+        "settings": "Paramètres",
+        "settingsTitle": "Préférences de témoins",
+        "essential": "Essentiels",
+        "essentialDesc": "Nécessaires au bon fonctionnement du site.",
+        "analytics": "Analytiques",
+        "analyticsDesc": "Nous aident à comprendre comment les visiteurs utilisent notre site (Google Analytics).",
+        "save": "Enregistrer"
+    },
+    "consent": {
+        "formBefore": "J'accepte la",
+        "privacyPolicy": "politique de confidentialité",
+        "formAfter": "et je consens à la collecte et à l'utilisation de mes données tel que décrit."
+    },
+    "privacy": {
+        "title": "Politique de confidentialité",
+        "lastUpdated": "Dernière mise à jour : mai 2026",
+        "introTitle": "Introduction",
+        "introText": "Plantagoshi (« nous », « notre ») s'engage à protéger vos renseignements personnels conformément à la Loi 25 du Québec (Loi sur la protection des renseignements personnels dans le secteur privé). Cette politique explique comment nous recueillons, utilisons, conservons et protégeons vos données.",
+        "officerTitle": "Responsable de la protection des renseignements personnels",
+        "officerText": "La personne responsable de la protection des renseignements personnels chez Plantagoshi est :",
+        "officerName": "Gabriel Laroche",
+        "officerRole": "Cofondateur et PDG",
+        "officerEmailBefore": "Contactez-nous via la",
+        "contactPage": "page de contact",
+        "collectionTitle": "Renseignements recueillis",
+        "collectionText": "Nous recueillons les renseignements personnels suivants via notre site web :",
+        "collectionItems": [
+            "Adresse courriel — lorsque vous vous inscrivez à notre liste d'attente ou nous contactez",
+            "Nom — lorsque vous le fournissez via notre formulaire de contact (facultatif)",
+            "Contenu du message — lorsque vous nous envoyez un message via notre formulaire de contact"
+        ],
+        "collectionNote": "Nous ne recueillons aucun renseignement sensible (santé, biométrie, données financières).",
+        "purposeTitle": "Finalités de la collecte",
+        "purposeText": "Vos renseignements personnels sont recueillis aux fins suivantes :",
+        "purposeItems": [
+            "Répondre à vos demandes et messages",
+            "Vous envoyer des nouvelles, mises à jour et annonces concernant Plantagoshi",
+            "Améliorer notre site web et nos services"
+        ],
+        "consentTitle": "Consentement",
+        "consentText": "Nous obtenons votre consentement explicite avant de recueillir vos renseignements personnels. Vous pouvez retirer votre consentement à tout moment en nous contactant. Sur retrait, nous cesserons d'utiliser vos données et les supprimerons sur demande.",
+        "storageTitle": "Stockage et sécurité des données",
+        "storageText": "Vos données sont stockées sur les serveurs MongoDB Atlas situés dans AWS Oregon (us-west-2), États-Unis. Nous mettons en œuvre des mesures de sécurité appropriées incluant le chiffrement et le contrôle des accès. Seuls les cofondateurs de Plantagoshi ont accès à vos données.",
+        "retentionTitle": "Conservation des données",
+        "retentionText": "Nous conservons vos renseignements personnels aussi longtemps que vous maintenez votre consentement. Vous pouvez demander la suppression de vos données à tout moment en nous contactant.",
+        "rightsTitle": "Vos droits",
+        "rightsText": "En vertu de la Loi 25 du Québec, vous avez le droit de :",
+        "rightsItems": [
+            "Accéder à vos renseignements personnels détenus par nous",
+            "Demander la correction de données inexactes",
+            "Demander la suppression de vos données",
+            "Demander la portabilité de vos données",
+            "Retirer votre consentement à tout moment"
+        ],
+        "rightsNoteBefore": "Nous répondrons à toutes les demandes dans un délai de 30 jours. Contactez-nous via la",
+        "cookiesTitle": "Témoins (Cookies) et suivi",
+        "cookiesText": "Par défaut, notre site web n'utilise aucun témoin de suivi ni outil d'analytique. Si vous acceptez les témoins analytiques via notre bannière de consentement, nous pourrons utiliser Google Analytics pour comprendre comment les visiteurs utilisent notre site. Vous pouvez modifier vos préférences de témoins à tout moment.",
+        "thirdPartyTitle": "Partage avec des tiers",
+        "thirdPartyText": "Nous ne partageons vos renseignements personnels avec aucun tiers. Si cela change à l'avenir, nous mettrons à jour cette politique et obtiendrons votre consentement avant tout partage.",
+        "changesTitle": "Modifications à cette politique",
+        "changesText": "Nous pouvons mettre à jour cette politique de temps à autre. Tout changement sera publié sur cette page avec une date de mise à jour.",
+        "automatedTitle": "Décisions automatisées",
+        "automatedText": "Nous n'utilisons pas de processus de décision automatisée qui vous affectent sur la base de vos données personnelles."
     }
 }

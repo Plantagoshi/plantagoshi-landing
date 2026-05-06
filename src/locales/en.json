@@ -155,6 +155,75 @@
         "copyright": "© 2026 Plantagoshi — Student Project.",
         "github": "GitHub",
         "instagram": "Instagram",
-        "demo": "Demo Video"
+        "demo": "Demo Video",
+        "privacy": "Privacy Policy"
+    },
+    "cookie": {
+        "message": "We use cookies to improve your experience. No tracking is active by default.",
+        "accept": "Accept All",
+        "reject": "Reject",
+        "settings": "Settings",
+        "settingsTitle": "Cookie Preferences",
+        "essential": "Essential",
+        "essentialDesc": "Required for the site to function properly.",
+        "analytics": "Analytics",
+        "analyticsDesc": "Help us understand how visitors use our site (Google Analytics).",
+        "save": "Save Preferences"
+    },
+    "consent": {
+        "formBefore": "I agree to the",
+        "privacyPolicy": "Privacy Policy",
+        "formAfter": "and consent to having my data collected and used as described."
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated: May 2026",
+        "introTitle": "Introduction",
+        "introText": "Plantagoshi (\"we\", \"our\", \"us\") is committed to protecting your personal information in accordance with Quebec's Law 25 (Act respecting the protection of personal information in the private sector). This policy explains how we collect, use, store, and protect your data.",
+        "officerTitle": "Privacy Officer",
+        "officerText": "The person responsible for the protection of personal information at Plantagoshi is:",
+        "officerName": "Gabriel Laroche",
+        "officerRole": "Co-founder & CEO",
+        "officerEmailBefore": "Contact us via the",
+        "contactPage": "contact page",
+        "collectionTitle": "Information We Collect",
+        "collectionText": "We collect the following personal information through our website:",
+        "collectionItems": [
+            "Email address — when you sign up for our waitlist or contact us",
+            "Name — when you provide it through our contact form (optional)",
+            "Message content — when you send us a message through our contact form"
+        ],
+        "collectionNote": "We do not collect any sensitive information (health, biometric, financial data).",
+        "purposeTitle": "Purpose of Collection",
+        "purposeText": "Your personal information is collected for the following purposes:",
+        "purposeItems": [
+            "Responding to your inquiries and messages",
+            "Sending you news, updates, and announcements about Plantagoshi",
+            "Improving our website and services"
+        ],
+        "consentTitle": "Consent",
+        "consentText": "We obtain your explicit consent before collecting your personal information. You may withdraw your consent at any time by contacting us. Upon withdrawal, we will stop using your data and delete it upon request.",
+        "storageTitle": "Data Storage & Security",
+        "storageText": "Your data is stored on MongoDB Atlas servers located in AWS Oregon (us-west-2), United States. We implement appropriate security measures including encryption and access controls. Only the co-founders of Plantagoshi have access to your data.",
+        "retentionTitle": "Data Retention",
+        "retentionText": "We retain your personal information as long as you maintain your consent. You may request deletion of your data at any time by contacting us.",
+        "rightsTitle": "Your Rights",
+        "rightsText": "Under Quebec's Law 25, you have the right to:",
+        "rightsItems": [
+            "Access your personal information held by us",
+            "Request correction of inaccurate data",
+            "Request deletion of your data",
+            "Request portability of your data",
+            "Withdraw your consent at any time"
+        ],
+        "rightsNoteBefore": "We will respond to all requests within 30 days. Contact us via the",
+        "cookiesTitle": "Cookies & Tracking",
+        "cookiesText": "By default, our website does not use any tracking cookies or analytics tools. If you accept analytics cookies through our consent banner, we may use Google Analytics to understand how visitors use our site. You can change your cookie preferences at any time.",
+        "thirdPartyTitle": "Third-Party Sharing",
+        "thirdPartyText": "We do not share your personal information with any third parties. If this changes in the future, we will update this policy and obtain your consent before sharing any data.",
+        "changesTitle": "Changes to This Policy",
+        "changesText": "We may update this policy from time to time. Any changes will be posted on this page with an updated date.",
+        "automatedTitle": "Automated Decision-Making",
+        "automatedText": "We do not use automated decision-making processes that affect you based on your personal data."
     }
 }

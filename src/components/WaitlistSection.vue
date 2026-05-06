@@ -45,7 +45,7 @@
                             class="input input-bordered rounded-full flex-1 bg-neutral-800 border-neutral-700 text-white placeholder-neutral-500 disabled:opacity-50"
                             @keyup.enter="handleSubmit"
                         />
-                        <BaseButton variant="primary" size="lg" :disabled="isLoading || !email" @click="handleSubmit">
+                        <BaseButton variant="primary" size="lg" :disabled="isLoading || !email || !consentChecked" @click="handleSubmit">
                             <template v-if="isLoading">
                                 <Loader2 class="w-4 h-4 animate-spin" />
                                 {{ t("waitlist.loading") }}
@@ -56,6 +56,15 @@
                             </template>
                         </BaseButton>
                     </div>
+
+                    <label class="flex items-start gap-2 max-w-md mx-auto cursor-pointer">
+                        <input v-model="consentChecked" type="checkbox" class="w-4 h-4 mt-0.5 shrink-0 accent-primary rounded border border-neutral-600 cursor-pointer" />
+                        <span class="text-xs text-neutral-400 text-left">
+                            {{ t("consent.formBefore") }}
+                            <router-link to="/privacy" class="text-primary hover:underline">{{ t("consent.privacyPolicy") }}</router-link>
+                            {{ t("consent.formAfter") }}
+                        </span>
+                    </label>
 
                     <!-- Error message -->
                     <p v-if="error" class="text-red-400 text-sm flex items-center justify-center gap-1.5">
@@ -78,6 +87,7 @@ import { useWaitlist } from "../composables/useWaitlist";
 import BaseButton from "./BaseButton.vue";
 
 const { t } = useI18n();
+const consentChecked = ref(false);
 const { isLoading, isSuccess, error, subscribe, reset } = useWaitlist();
 
 const email = ref("");

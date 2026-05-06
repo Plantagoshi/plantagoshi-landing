@@ -78,6 +78,16 @@
                         ></textarea>
                     </div>
 
+                    <!-- Consent checkbox -->
+                    <label class="flex items-start gap-3 cursor-pointer">
+                        <input v-model="consentChecked" type="checkbox" class="w-4 h-4 mt-0.5 shrink-0 accent-primary rounded border border-base-300 cursor-pointer" />
+                        <span class="text-xs text-neutral-500 text-left">
+                            {{ t("consent.formBefore") }}
+                            <router-link to="/privacy" class="text-primary hover:underline">{{ t("consent.privacyPolicy") }}</router-link>
+                            {{ t("consent.formAfter") }}
+                        </span>
+                    </label>
+
                     <!-- Error -->
                     <p v-if="error" class="text-red-500 text-sm flex items-center gap-1.5">
                         <CircleAlert class="w-4 h-4 shrink-0" />
@@ -88,7 +98,7 @@
                         type="submit"
                         variant="primary"
                         size="lg"
-                        :disabled="isLoading || !email"
+                        :disabled="isLoading || !email || !consentChecked"
                         class="w-full"
                     >
                         <template v-if="isLoading">
@@ -116,6 +126,7 @@ import { useWaitlist } from "../composables/useWaitlist";
 import BaseButton from "../components/BaseButton.vue";
 
 const { t } = useI18n();
+const consentChecked = ref(false);
 const { isLoading, isSuccess, error, subscribe, reset } = useWaitlist();
 
 const name = ref("");

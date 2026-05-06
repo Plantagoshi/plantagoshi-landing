@@ -10,6 +10,10 @@
             </span>
             <p>{{ t('footer.copyright') }}</p>
             <div class="flex gap-6">
+                <router-link
+                    to="/privacy"
+                    class="hover:text-primary transition-colors"
+                >{{ t('footer.privacy') }}</router-link>
                 <a
                     href="https://github.com/Plantagoshi"
                     target="_blank"

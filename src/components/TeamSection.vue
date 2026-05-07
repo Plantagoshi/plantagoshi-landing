@@ -1,5 +1,5 @@
 <template>
-  <section id="team" class="py-16 px-6 bg-base-100 rounded-4xl mx-4 md:mx-10 shadow-sm">
+  <section id="team" class="py-16 px-6 bg-base-100 rounded-4xl mx-4 my-16 md:mx-10 shadow-sm">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
         <span class="text-primary font-bold text-sm uppercase tracking-widest">{{ t('team.label') }}</span>

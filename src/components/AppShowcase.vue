@@ -1,5 +1,5 @@
 <template>
-  <section id="mobileApp" class="py-16 px-6">
+  <section id="mobileApp" class="py-16 px-6 my-16">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
       <div class="flex-1 space-y-6">
         <span class="text-primary font-bold text-sm uppercase tracking-widest">{{ t('appShowcase.label') }}</span>
@@ -19,7 +19,7 @@
 
       <!-- App Screenshots Carousel -->
       <div class="flex-1 flex flex-col items-center">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center">
           <button
             class="btn btn-circle btn-sm btn-ghost text-base-content/60 hover:text-primary"
             @click="prevSlide"
@@ -29,7 +29,7 @@
           </button>
 
           <div
-            class="mockup-phone scale-75 origin-center -my-16"
+            class="mockup-phone scale-60 origin-center -my-32"
             @touchstart="onTouchStart"
             @touchend="onTouchEnd"
           >

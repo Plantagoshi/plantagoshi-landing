@@ -4,7 +4,7 @@
       <div class="flex-1 space-y-6">
         <span class="text-primary font-bold text-sm uppercase tracking-widest">{{ t('appShowcase.label') }}</span>
         <h2 class="text-4xl font-bold font-display">{{ t('appShowcase.title') }}</h2>
-        <p class="text-lg text-neutral-600">
+        <p class="text-lg text-base-content/70">
           {{ t('appShowcase.description') }}
         </p>
         <ul class="space-y-4 pt-2">
@@ -12,7 +12,7 @@
             <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
               <Check class="w-3.5 h-3.5 text-primary" />
             </span>
-            <span class="text-neutral-700">{{ t(`appShowcase.features.${i - 1}`) }}</span>
+            <span class="text-base-content/80">{{ t(`appShowcase.features.${i - 1}`) }}</span>
           </li>
         </ul>
       </div>
@@ -21,7 +21,7 @@
       <div class="flex-1 flex flex-col items-center">
         <div class="flex items-center gap-3">
           <button
-            class="btn btn-circle btn-sm btn-ghost text-neutral-500 hover:text-primary"
+            class="btn btn-circle btn-sm btn-ghost text-base-content/60 hover:text-primary"
             @click="prevSlide"
             aria-label="Previous screenshot"
           >
@@ -53,7 +53,7 @@
           </div>
 
           <button
-            class="btn btn-circle btn-sm btn-ghost text-neutral-500 hover:text-primary"
+            class="btn btn-circle btn-sm btn-ghost text-base-content/60 hover:text-primary"
             @click="nextSlide"
             aria-label="Next screenshot"
           >
@@ -66,7 +66,7 @@
             v-for="(image, index) in images"
             :key="index"
             class="h-3 rounded-full transition-all duration-300"
-            :class="activeSlide === index ? 'bg-primary w-6' : 'bg-neutral-300 w-3'"
+            :class="activeSlide === index ? 'bg-primary w-6' : 'bg-base-300 w-3'"
             @click="goToSlide(index)"
             :aria-label="`Go to screenshot ${index + 1}`"
           />

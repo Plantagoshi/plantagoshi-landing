@@ -1,10 +1,10 @@
 <template>
-  <section id="features" class="py-16 bg-white rounded-4xl mx-4 md:mx-10 shadow-sm">
+  <section id="features" class="py-16 bg-base-100 rounded-4xl mx-4 md:mx-10 shadow-sm">
     <div class="max-w-6xl mx-auto px-6">
       <div class="mb-8 space-y-3">
         <span class="text-primary font-bold text-sm uppercase tracking-widest">{{ t('features.label') }}</span>
         <h2 class="text-4xl font-bold font-display">{{ t('features.title') }}</h2>
-        <p class="text-neutral-500 max-w-2xl">
+        <p class="text-base-content/60 max-w-2xl">
           {{ t('features.description') }}
         </p>
       </div>
@@ -17,7 +17,7 @@
               <Microscope class="text-primary w-5 h-5" />
             </div>
             <h3 class="card-title">{{ t('features.precision.title') }}</h3>
-            <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.precision.desc') }}</p>
+            <p class="text-base-content/70 leading-relaxed text-sm">{{ t('features.precision.desc') }}</p>
           </div>
         </div>
 
@@ -28,7 +28,7 @@
               <Bot class="text-accent w-5 h-5" />
             </div>
             <h3 class="card-title">{{ t('features.ai.title') }}</h3>
-            <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.ai.desc') }}</p>
+            <p class="text-base-content/70 leading-relaxed text-sm">{{ t('features.ai.desc') }}</p>
           </div>
         </div>
 
@@ -39,7 +39,7 @@
               <Smartphone class="text-info w-5 h-5" />
             </div>
             <h3 class="card-title">{{ t('features.app.title') }}</h3>
-            <p class="text-neutral-600 leading-relaxed text-sm">{{ t('features.app.desc') }}</p>
+            <p class="text-base-content/70 leading-relaxed text-sm">{{ t('features.app.desc') }}</p>
           </div>
         </div>
       </div>

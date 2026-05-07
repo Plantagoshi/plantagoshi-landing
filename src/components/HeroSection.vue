@@ -1,6 +1,6 @@
 <template>
     <section
-        class="relative min-h-screen w-full bg-white text-neutral-800 overflow-hidden flex items-center justify-center"
+        class="relative min-h-screen w-full bg-base-100 text-base-content overflow-hidden flex items-center justify-center"
     >
         <div
             class="relative z-10 w-full max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center"
@@ -9,23 +9,23 @@
             <div class="space-y-6">
                 <Transition name="details" mode="out-in">
                     <div :key="activeFace" class="space-y-1">
-                        <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">
+                        <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-base-content/50">
                             {{ t(`hero.emotions.${activeFace}`) }}
                         </h2>
-                        <p class="text-sm italic text-neutral-500">
+                        <p class="text-sm italic text-base-content/60">
                             "{{ t(`hero.quotes.${activeFace}`) }}"
                         </p>
                     </div>
                 </Transition>
 
                 <h1
-                    class="text-5xl md:text-6xl font-bold leading-tight font-display text-neutral-900"
+                    class="text-5xl md:text-6xl font-bold leading-tight font-display text-base-content"
                 >
                     {{ t('hero.title') }}<br />
                     <span class="text-primary block mt-1">{{ t('hero.subtitle') }}</span>
                 </h1>
 
-                <p class="text-lg text-neutral-600 max-w-md leading-relaxed">
+                <p class="text-lg text-base-content/70 max-w-md leading-relaxed">
                     {{ t('hero.description') }}
                 </p>
 
@@ -68,7 +68,7 @@
 
                     <!-- Face Container -->
                     <div
-                        class="relative h-72 w-72 md:h-96 md:w-96 rounded-full border border-neutral-200 shadow-xl overflow-hidden"
+                        class="relative h-72 w-72 md:h-96 md:w-96 rounded-full border border-base-300 shadow-xl overflow-hidden"
                         :style="{ backgroundColor: faceBg, boxShadow: 'inset 0 0 40px rgba(0,0,0,0.10)' }"
                     >
                         <div class="w-full h-full animate-float">
@@ -83,7 +83,7 @@
                         <Transition name="details" mode="out-in">
                             <div
                                 :key="activeFace"
-                                class="flex items-center gap-2 text-xs uppercase tracking-widest text-neutral-500 bg-white/90 px-4 py-2 rounded-full border border-neutral-200 backdrop-blur shadow-sm"
+                                class="flex items-center gap-2 text-xs uppercase tracking-widest text-base-content/60 bg-base-100/90 px-4 py-2 rounded-full border border-base-300 backdrop-blur shadow-sm"
                             >
                                 <span
                                     class="h-1.5 w-1.5 rounded-full animate-pulse"
@@ -97,7 +97,7 @@
 
                 <!-- Stats below plant face -->
                 <div
-                    class="w-full max-w-sm bg-neutral-50 p-4 rounded-2xl border border-neutral-200 shadow-sm"
+                    class="w-full max-w-sm bg-base-200 p-4 rounded-2xl border border-base-300 shadow-sm"
                 >
                     <Transition name="details" mode="out-in">
                         <div :key="activeFace" class="space-y-3">
@@ -107,8 +107,8 @@
                                         class="flex items-center gap-2"
                                         :class="
                                             stat.value > 50
-                                                ? 'text-neutral-700'
-                                                : 'text-neutral-500'
+                                                ? 'text-base-content'
+                                                : 'text-base-content/60'
                                         "
                                     >
                                         <component
@@ -118,12 +118,12 @@
                                         />
                                         <span>{{ t(stat.labelKey) }}</span>
                                     </div>
-                                    <span class="font-mono text-xs text-neutral-400">{{
+                                    <span class="font-mono text-xs text-base-content/50">{{
                                         stat.displayValue
                                     }}</span>
                                 </div>
                                 <div
-                                    class="relative h-1.5 w-full bg-neutral-200 rounded-full overflow-hidden"
+                                    class="relative h-1.5 w-full bg-base-300 rounded-full overflow-hidden"
                                 >
                                     <div
                                         class="absolute top-0 bottom-0 left-0 rounded-full opacity-80 transition-all duration-1000 ease-out"

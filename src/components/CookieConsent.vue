@@ -15,7 +15,7 @@
             <div v-if="!showSettings" class="p-5 space-y-4">
                 <div class="flex items-start gap-3">
                     <Cookie class="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <p class="text-sm text-neutral-600 leading-relaxed">
+                    <p class="text-sm text-base-content/70 leading-relaxed">
                         {{ t("cookie.message") }}
                     </p>
                 </div>
@@ -28,7 +28,7 @@
                     </BaseButton>
                 </div>
                 <button
-                    class="text-xs text-neutral-400 hover:text-neutral-600 underline underline-offset-2 transition-colors w-full text-center"
+                    class="text-xs text-base-content/50 hover:text-base-content/70 underline underline-offset-2 transition-colors w-full text-center"
                     @click="showSettings = true"
                 >
                     {{ t("cookie.settings") }}
@@ -43,7 +43,7 @@
                 <div class="flex items-center justify-between gap-3">
                     <div>
                         <p class="text-sm font-medium">{{ t("cookie.essential") }}</p>
-                        <p class="text-xs text-neutral-400">{{ t("cookie.essentialDesc") }}</p>
+                        <p class="text-xs text-base-content/50">{{ t("cookie.essentialDesc") }}</p>
                     </div>
                     <input type="checkbox" class="w-4 h-4 shrink-0 accent-primary rounded border border-base-300" checked disabled />
                 </div>
@@ -52,7 +52,7 @@
                 <div class="flex items-center justify-between gap-3">
                     <div>
                         <p class="text-sm font-medium">{{ t("cookie.analytics") }}</p>
-                        <p class="text-xs text-neutral-400">{{ t("cookie.analyticsDesc") }}</p>
+                        <p class="text-xs text-base-content/50">{{ t("cookie.analyticsDesc") }}</p>
                     </div>
                     <input v-model="analyticsToggle" type="checkbox" class="w-4 h-4 shrink-0 accent-primary rounded border border-base-300 cursor-pointer" />
                 </div>

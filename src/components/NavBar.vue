@@ -20,6 +20,15 @@
             </div>
 
             <div class="flex items-center gap-4">
+                <button
+                    class="hidden md:inline-flex btn btn-ghost btn-sm btn-circle"
+                    @click="toggleTheme"
+                    aria-label="Toggle theme"
+                >
+                    <Sun v-if="isDark" class="w-4 h-4" />
+                    <Moon v-else class="w-4 h-4" />
+                </button>
+
                 <div class="hidden md:flex join">
                     <button
                         class="join-item btn btn-sm"
@@ -94,6 +103,13 @@
                                 </button>
                             </div>
                         </li>
+                        <li>
+                            <button @click="toggleTheme" class="flex items-center gap-2">
+                                <Sun v-if="isDark" class="w-4 h-4" />
+                                <Moon v-else class="w-4 h-4" />
+                                {{ isDark ? 'Light' : 'Dark' }}
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -104,10 +120,12 @@
 <script setup>
 import { ref } from 'vue';
 import { onClickOutside } from '@vueuse/core';
-import { Leaf, Menu, X } from 'lucide-vue-next';
+import { Leaf, Menu, Moon, Sun, X } from 'lucide-vue-next';
 import { useI18n } from '../composables/useI18n';
+import { useTheme } from '../composables/useTheme';
 
 const { t, currentLocale, toggleLocale } = useI18n();
+const { isDark, toggleTheme } = useTheme();
 
 const navLinks = [
     { to: '/timeline', label: 'nav.journey' },

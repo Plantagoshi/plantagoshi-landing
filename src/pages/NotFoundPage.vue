@@ -5,7 +5,7 @@
                 <Leaf class="w-10 h-10 text-primary" />
             </div>
             <h1 class="text-7xl font-bold font-display">404</h1>
-            <p class="text-xl text-neutral-500 max-w-md mx-auto">
+            <p class="text-xl text-base-content/60 max-w-md mx-auto">
                 {{ t("notFound.message") }}
             </p>
             <router-link to="/" class="btn btn-primary btn-lg">

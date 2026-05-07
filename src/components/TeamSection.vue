@@ -1,10 +1,10 @@
 <template>
-  <section id="team" class="py-16 px-6 bg-white rounded-4xl mx-4 md:mx-10 shadow-sm">
+  <section id="team" class="py-16 px-6 bg-base-100 rounded-4xl mx-4 md:mx-10 shadow-sm">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
         <span class="text-primary font-bold text-sm uppercase tracking-widest">{{ t('team.label') }}</span>
         <h2 class="text-4xl font-bold font-display mt-2">{{ t('team.title') }}</h2>
-        <p class="text-neutral-500 mt-2 max-w-xl mx-auto">
+        <p class="text-base-content/60 mt-2 max-w-xl mx-auto">
           {{ t('team.description') }}
         </p>
       </div>
@@ -21,7 +21,7 @@
             </div>
           </div>
           <p class="font-bold font-display mt-4">{{ t(`team.members.${member.name}.name`) }}</p>
-          <p class="text-sm text-neutral-500 mt-1">{{ t(`team.members.${member.name}.role`) }}</p>
+          <p class="text-sm text-base-content/60 mt-1">{{ t(`team.members.${member.name}.role`) }}</p>
           <div class="flex gap-3 mt-2">
             <SocialIcon type="github" :url="member.github" />
             <SocialIcon type="linkedin" :url="member.linkedin" />

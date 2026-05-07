@@ -6,7 +6,7 @@
                     t('timeline.label')
                 }}</span>
                 <h2 class="text-4xl font-bold font-display mt-2 mb-2">{{ t('timeline.title') }}</h2>
-                <p class="text-neutral-500">{{ t('timeline.description') }}</p>
+                <p class="text-base-content/60">{{ t('timeline.description') }}</p>
             </div>
             <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                 <li v-for="(step, i) in steps" :key="step" data-aos="fade-up" :data-aos-delay="i * 100">
@@ -45,7 +45,7 @@
                                 />
                             </div>
                             <div>
-                                <p class="text-neutral-600 text-left">
+                                <p class="text-base-content/70 text-left">
                                     {{ t(`timeline.steps.${step.name}.note`) }}
                                 </p>
                                 <div class="mt-2 flex flex-wrap gap-3">

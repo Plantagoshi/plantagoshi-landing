@@ -10,7 +10,7 @@
                 <h1 class="text-4xl md:text-5xl font-bold font-display mb-4">
                     {{ t("contact.title") }}
                 </h1>
-                <p class="text-neutral-500 text-lg max-w-md mx-auto leading-relaxed">
+                <p class="text-base-content/60 text-lg max-w-md mx-auto leading-relaxed">
                     {{ t("contact.description") }}
                 </p>
             </div>
@@ -18,12 +18,12 @@
             <!-- Success state -->
             <div v-if="isSuccess" class="text-center py-16">
                 <div
-                    class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 mb-6"
+                    class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-success/15 mb-6"
                 >
-                    <Check class="w-10 h-10 text-green-600" />
+                    <Check class="w-10 h-10 text-success" />
                 </div>
                 <h2 class="text-2xl font-bold font-display mb-2">{{ t("contact.successTitle") }}</h2>
-                <p class="text-neutral-500 mb-8">{{ t("contact.successMessage") }}</p>
+                <p class="text-base-content/60 mb-8">{{ t("contact.successMessage") }}</p>
                 <button
                     class="text-sm text-primary underline underline-offset-2 hover:text-primary/70 transition-colors"
                     @click="reset"
@@ -81,7 +81,7 @@
                     <!-- Consent checkbox -->
                     <label class="flex items-start gap-3 cursor-pointer">
                         <input v-model="consentChecked" type="checkbox" class="w-4 h-4 mt-0.5 shrink-0 accent-primary rounded border border-base-300 cursor-pointer" />
-                        <span class="text-xs text-neutral-500 text-left">
+                        <span class="text-xs text-base-content/60 text-left">
                             {{ t("consent.formBefore") }}
                             <router-link to="/privacy" class="text-primary hover:underline">{{ t("consent.privacyPolicy") }}</router-link>
                             {{ t("consent.formAfter") }}
@@ -89,7 +89,7 @@
                     </label>
 
                     <!-- Error -->
-                    <p v-if="error" class="text-red-500 text-sm flex items-center gap-1.5">
+                    <p v-if="error" class="text-error text-sm flex items-center gap-1.5">
                         <CircleAlert class="w-4 h-4 shrink-0" />
                         {{ error }}
                     </p>
@@ -111,7 +111,7 @@
                         </template>
                     </BaseButton>
 
-                    <p class="text-xs text-neutral-400 text-center">{{ t("contact.note") }}</p>
+                    <p class="text-xs text-base-content/50 text-center">{{ t("contact.note") }}</p>
                 </div>
             </form>
         </div>

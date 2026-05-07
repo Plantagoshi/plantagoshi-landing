@@ -115,8 +115,29 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue';
 import { Shield } from 'lucide-vue-next';
+import { computed } from 'vue';
 import { useI18n } from '../composables/useI18n';
 
-const { t, tm, rt } = useI18n();
+const { t, tm, rt, locale } = useI18n();
+
+useHead({
+    title: computed(() =>
+        locale.value === 'fr'
+            ? 'Politique de confidentialité — Plantagoshi'
+            : 'Privacy Policy — Plantagoshi'
+    ),
+    meta: [
+        {
+            name: 'description',
+            content: computed(() =>
+                locale.value === 'fr'
+                    ? 'Politique de confidentialité de Plantagoshi. Apprenez comment nous protégeons vos données.'
+                    : 'Plantagoshi privacy policy. Learn how we protect your data.'
+            ),
+        },
+    ],
+    link: [{ rel: 'canonical', href: 'https://plantagoshi.ca/privacy' }],
+});
 </script>

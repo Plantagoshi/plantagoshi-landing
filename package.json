@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
+    "@unhead/vue": "^3.1.0",
     "@vueuse/core": "^14.3.0",
     "@vueuse/motion": "^3.0.3",
     "aos": "^2.3.4",

@@ -119,13 +119,32 @@
 </template>
 
 <script setup>
-import { Check, CircleAlert, Leaf, Loader2, Send } from "lucide-vue-next";
-import { ref } from "vue";
-import { useI18n } from "../composables/useI18n";
-import { useWaitlist } from "../composables/useWaitlist";
-import BaseButton from "../components/BaseButton.vue";
+import { useHead } from '@unhead/vue';
+import { Check, CircleAlert, Leaf, Loader2, Send } from 'lucide-vue-next';
+import { computed, ref } from 'vue';
+import { useI18n } from '../composables/useI18n';
+import { useWaitlist } from '../composables/useWaitlist';
+import BaseButton from '../components/BaseButton.vue';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
+
+useHead({
+    title: computed(() =>
+        locale.value === 'fr' ? 'Contact — Plantagoshi' : 'Contact — Plantagoshi'
+    ),
+    meta: [
+        {
+            name: 'description',
+            content: computed(() => t('contact.description')),
+        },
+        { property: 'og:title', content: 'Contact — Plantagoshi' },
+        {
+            property: 'og:description',
+            content: computed(() => t('contact.description')),
+        },
+    ],
+    link: [{ rel: 'canonical', href: 'https://plantagoshi.ca/contact' }],
+});
 const consentChecked = ref(false);
 const { isLoading, isSuccess, error, subscribe, reset } = useWaitlist();
 

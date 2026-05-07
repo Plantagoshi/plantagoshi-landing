@@ -72,10 +72,36 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue';
 import { ExternalLink } from 'lucide-vue-next';
+import { computed } from 'vue';
 import { useI18n } from '../composables/useI18n';
 import BaseButton from '@/components/BaseButton.vue';
-const { t } = useI18n();
+
+const { t, locale } = useI18n();
+
+useHead({
+    title: computed(() =>
+        locale.value === 'fr' ? 'Chronologie — Plantagoshi' : 'Timeline — Plantagoshi'
+    ),
+    meta: [
+        {
+            name: 'description',
+            content: computed(() => t('timeline.description')),
+        },
+        {
+            property: 'og:title',
+            content: computed(() =>
+                locale.value === 'fr' ? 'Chronologie — Plantagoshi' : 'Timeline — Plantagoshi'
+            ),
+        },
+        {
+            property: 'og:description',
+            content: computed(() => t('timeline.description')),
+        },
+    ],
+    link: [{ rel: 'canonical', href: 'https://plantagoshi.ca/timeline' }],
+});
 
 const steps = [
     {

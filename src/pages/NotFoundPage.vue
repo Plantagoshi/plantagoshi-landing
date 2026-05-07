@@ -16,8 +16,14 @@
 </template>
 
 <script setup>
-import { Leaf } from "lucide-vue-next";
-import { useI18n } from "../composables/useI18n";
+import { useHead } from '@unhead/vue';
+import { Leaf } from 'lucide-vue-next';
+import { useI18n } from '../composables/useI18n';
 
 const { t } = useI18n();
+
+useHead({
+    title: '404 — Plantagoshi',
+    meta: [{ name: 'robots', content: 'noindex' }],
+});
 </script>

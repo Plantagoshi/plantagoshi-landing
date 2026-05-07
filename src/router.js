@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage.vue";
 import TimelinePage from "./pages/TimelinePage.vue";
 import NotFoundPage from "./pages/NotFoundPage.vue";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.vue";
-
 const routes = [
     { path: "/", component: HomePage },
     { path: "/timeline", component: TimelinePage },

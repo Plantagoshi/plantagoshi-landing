@@ -109,6 +109,7 @@
 
 <script setup>
 import { computed } from "vue";
+import { getEmotion } from "../config/emotions";
 
 const props = defineProps({
     state: {
@@ -117,45 +118,8 @@ const props = defineProps({
     },
 });
 
-const emotionMap = {
-    happy: {
-        bg: "#E2B059",
-        eyeRx: 9,
-        eyeRy: 10,
-        eyeYOffset: 0,
-        animClass: "face-bounce",
-    },
-    content: {
-        bg: "#A8C5A0",
-        eyeRx: 8,
-        eyeRy: 8,
-        eyeYOffset: 0,
-        animClass: "",
-    },
-    thirsty: {
-        bg: "#B8D4E8",
-        eyeRx: 8,
-        eyeRy: 5,
-        eyeYOffset: 5,
-        animClass: "face-droop",
-    },
-    angry: {
-        bg: "#E8887A",
-        eyeRx: 9,
-        eyeRy: 7,
-        eyeYOffset: 0,
-        animClass: "face-shake",
-    },
-    sleepy: {
-        bg: "#C8C8D8",
-        eyeRx: 8,
-        eyeRy: 3,
-        eyeYOffset: 3,
-        animClass: "face-breathe",
-    },
-};
-
-const faceConfig = computed(() => emotionMap[props.state] || emotionMap.happy);
+const emotion = computed(() => getEmotion(props.state));
+const faceConfig = computed(() => ({ bg: emotion.value.bg, ...emotion.value.face }));
 const eyeY = computed(() => 36 + (faceConfig.value.eyeYOffset || 0));
 </script>
 

@@ -144,15 +144,15 @@
 </template>
 
 <script setup>
-import { ArrowDown, Droplets, Moon, Sun, Thermometer, Trophy } from 'lucide-vue-next';
+import { ArrowDown, Trophy } from 'lucide-vue-next';
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
+import { EMOTION_KEYS, getEmotion } from '../config/emotions';
 import { useI18n } from '../composables/useI18n';
 import BaseButton from './BaseButton.vue';
 import PlantFace from './PlantFace.vue';
 
 const { t } = useI18n();
 
-const faces = ['happy', 'content', 'thirsty', 'angry', 'sleepy'];
 const activeFace = ref('happy');
 const animatedBars = ref(false);
 let interval;
@@ -163,8 +163,8 @@ onMounted(() => {
         animatedBars.value = true;
     });
     interval = setInterval(() => {
-        i = (i + 1) % faces.length;
-        activeFace.value = faces[i];
+        i = (i + 1) % EMOTION_KEYS.length;
+        activeFace.value = EMOTION_KEYS[i];
     }, 3000);
 });
 
@@ -179,173 +179,10 @@ watch(activeFace, async () => {
     });
 });
 
-const glowMap = {
-    happy: '#E2B059',
-    content: '#386641',
-    thirsty: '#5BA4CF',
-    angry: '#BC4749',
-    sleepy: '#9090AA',
-};
-const emotionGlow = computed(() => glowMap[activeFace.value] || glowMap.happy);
-
-// Match PlantFace's internal emotionMap for the container background
-const faceBgMap = {
-    happy: '#E2B059',
-    content: '#A8C5A0',
-    thirsty: '#B8D4E8',
-    angry: '#E8887A',
-    sleepy: '#C8C8D8',
-};
-const faceBg = computed(() => faceBgMap[activeFace.value] || faceBgMap.happy);
-
-const ringColorMap = {
-    happy: 'border-l-amber-500/50',
-    content: 'border-l-emerald-500/50',
-    thirsty: 'border-l-sky-500/50',
-    angry: 'border-l-red-500/50',
-    sleepy: 'border-l-zinc-400/50',
-};
-const ringColor = computed(() => ringColorMap[activeFace.value] || ringColorMap.happy);
-
-const backgroundGradient = computed(() => {
-    const color = glowMap[activeFace.value] || glowMap.happy;
-    return `radial-gradient(circle at 70% 50%, ${color}22, transparent 50%)`;
-});
-
-const statsMap = {
-    happy: [
-        {
-            labelKey: 'hero.moisture',
-            displayValue: '72%',
-            value: 72,
-            icon: Droplets,
-            iconColor: '#5BA4CF',
-            barColor: '#5BA4CF',
-        },
-        {
-            labelKey: 'hero.light',
-            displayValue: '820lx',
-            value: 82,
-            icon: Sun,
-            iconColor: '#E2B059',
-            barColor: '#E2B059',
-        },
-        {
-            labelKey: 'hero.temp',
-            displayValue: '22°C',
-            value: 55,
-            icon: Thermometer,
-            iconColor: '#386641',
-            barColor: '#386641',
-        },
-    ],
-    content: [
-        {
-            labelKey: 'hero.moisture',
-            displayValue: '55%',
-            value: 55,
-            icon: Droplets,
-            iconColor: '#5BA4CF',
-            barColor: '#5BA4CF',
-        },
-        {
-            labelKey: 'hero.light',
-            displayValue: '540lx',
-            value: 54,
-            icon: Sun,
-            iconColor: '#E2B059',
-            barColor: '#E2B059',
-        },
-        {
-            labelKey: 'hero.temp',
-            displayValue: '21°C',
-            value: 52,
-            icon: Thermometer,
-            iconColor: '#386641',
-            barColor: '#386641',
-        },
-    ],
-    thirsty: [
-        {
-            labelKey: 'hero.moisture',
-            displayValue: '8%',
-            value: 8,
-            icon: Droplets,
-            iconColor: '#BC4749',
-            barColor: '#BC4749',
-        },
-        {
-            labelKey: 'hero.light',
-            displayValue: '310lx',
-            value: 31,
-            icon: Sun,
-            iconColor: '#E2B059',
-            barColor: '#E2B059',
-        },
-        {
-            labelKey: 'hero.temp',
-            displayValue: '23°C',
-            value: 58,
-            icon: Thermometer,
-            iconColor: '#386641',
-            barColor: '#386641',
-        },
-    ],
-    angry: [
-        {
-            labelKey: 'hero.moisture',
-            displayValue: '41%',
-            value: 41,
-            icon: Droplets,
-            iconColor: '#5BA4CF',
-            barColor: '#5BA4CF',
-        },
-        {
-            labelKey: 'hero.light',
-            displayValue: '2100lx',
-            value: 95,
-            icon: Sun,
-            iconColor: '#BC4749',
-            barColor: '#BC4749',
-        },
-        {
-            labelKey: 'hero.temp',
-            displayValue: '38°C',
-            value: 95,
-            icon: Thermometer,
-            iconColor: '#BC4749',
-            barColor: '#BC4749',
-        },
-    ],
-    sleepy: [
-        {
-            labelKey: 'hero.moisture',
-            displayValue: '48%',
-            value: 48,
-            icon: Droplets,
-            iconColor: '#9090AA',
-            barColor: '#9090AA',
-        },
-        {
-            labelKey: 'hero.light',
-            displayValue: '12lx',
-            value: 5,
-            icon: Moon,
-            iconColor: '#9090AA',
-            barColor: '#9090AA',
-        },
-        {
-            labelKey: 'hero.temp',
-            displayValue: '18°C',
-            value: 45,
-            icon: Thermometer,
-            iconColor: '#9090AA',
-            barColor: '#9090AA',
-        },
-    ],
-};
-
-const emotionStats = computed(() => statsMap[activeFace.value] || statsMap.happy);
+const activeEmotion = computed(() => getEmotion(activeFace.value));
+const emotionGlow = computed(() => activeEmotion.value.glow);
+const faceBg = computed(() => activeEmotion.value.bg);
+const emotionStats = computed(() => activeEmotion.value.stats);
 </script>
 
 <style scoped>

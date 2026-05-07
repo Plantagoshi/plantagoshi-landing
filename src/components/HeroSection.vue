@@ -2,11 +2,6 @@
     <section class="pt-24 pb-16 px-6 overflow-hidden">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-4">
-                <div class="badge badge-outline badge-primary gap-2">
-                    <span class="badge badge-success badge-xs animate-pulse"></span>
-                    {{ t('hero.mood') }} {{ t(`hero.emotions.${activeFace}`) }}
-                </div>
-
                 <h1 class="text-5xl md:text-6xl font-bold leading-tight font-display">
                     {{ t('hero.title') }}<br />
                     <span class="text-primary block mt-1">{{ t('hero.subtitle') }}</span>
@@ -16,15 +11,15 @@
                     {{ t('hero.description') }}
                 </p>
 
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col items-start gap-2">
                     <div
-                        class="badge bg-[#F7941E] border-[#F7941E] gap-2 h-auto py-1.5 whitespace-normal text-left leading-snug"
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F7941E]/15 text-[#b06800] text-sm font-medium whitespace-normal text-left leading-snug"
                     >
                         <Trophy class="w-4 h-4 shrink-0" />
                         {{ t('hero.osentreprendre.local') }}
                     </div>
                     <div
-                        class="badge bg-[#8DC63F] border-[#8DC63F] gap-2 h-auto py-1.5 whitespace-normal text-left leading-snug"
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#8DC63F]/15 text-[#4a7a1a] text-sm font-medium whitespace-normal text-left leading-snug"
                     >
                         <Trophy class="w-4 h-4 shrink-0" />
                         {{ t('hero.osentreprendre.regional') }}

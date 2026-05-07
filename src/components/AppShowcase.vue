@@ -9,7 +9,9 @@
         </p>
         <ul class="space-y-4 pt-2">
           <li v-for="i in 5" :key="i" class="flex gap-3 items-start">
-            <span class="text-primary mt-0.5 font-bold">✓</span>
+            <span class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+              <Check class="w-3.5 h-3.5 text-primary" />
+            </span>
             <span class="text-neutral-700">{{ t(`appShowcase.features.${i - 1}`) }}</span>
           </li>
         </ul>
@@ -63,8 +65,8 @@
           <button
             v-for="(image, index) in images"
             :key="index"
-            class="w-3 h-3 rounded-full transition-colors duration-300"
-            :class="activeSlide === index ? 'bg-primary scale-125' : 'bg-neutral-300'"
+            class="h-3 rounded-full transition-all duration-300"
+            :class="activeSlide === index ? 'bg-primary w-6' : 'bg-neutral-300 w-3'"
             @click="goToSlide(index)"
             :aria-label="`Go to screenshot ${index + 1}`"
           />
@@ -76,7 +78,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { ChevronLeft, ChevronRight } from "lucide-vue-next";
+import { Check, ChevronLeft, ChevronRight } from "lucide-vue-next";
 import { useI18n } from "../composables/useI18n";
 
 const { t } = useI18n();

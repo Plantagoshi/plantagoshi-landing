@@ -9,25 +9,22 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+      <div class="flex flex-wrap justify-center gap-12">
         <div
           v-for="(member, i) in members"
           :key="i"
-          class="card bg-base-200 hover:scale-110 transition-all duration-200"
-          :class="{ 'col-span-2 md:col-span-1': i === members.length - 1 && members.length % 2 !== 0 }"
+          class="flex flex-col w-52 items-center text-center"
         >
-          <div class="card-body items-center text-center p-6">
-            <div class="avatar">
-              <div class="w-24 rounded-full">
-                <img :src="member.image" />
-              </div>
+          <div class="avatar">
+            <div class="w-24 rounded-full">
+              <img :src="member.image" />
             </div>
-            <p class="font-bold font-display">{{ t(`team.members.${member.name}.name`) }}</p>
-            <p class="text-sm text-neutral-500 mt-1">{{ t(`team.members.${member.name}.role`) }}</p>
-            <div class="flex gap-3 mt-1">
-              <SocialIcon type="github" :url="member.github" />
-              <SocialIcon type="linkedin" :url="member.linkedin" />
-            </div>
+          </div>
+          <p class="font-bold font-display mt-4">{{ t(`team.members.${member.name}.name`) }}</p>
+          <p class="text-sm text-neutral-500 mt-1">{{ t(`team.members.${member.name}.role`) }}</p>
+          <div class="flex gap-3 mt-2">
+            <SocialIcon type="github" :url="member.github" />
+            <SocialIcon type="linkedin" :url="member.linkedin" />
           </div>
         </div>
       </div>

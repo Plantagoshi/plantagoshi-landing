@@ -1,93 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui/index.js";
 
 @plugin "daisyui/theme" {
-  name: "plantagoshi";
-  default: true;
-  prefersdark: false;
-  color-scheme: light;
+    name: 'plantagoshi';
+    default: true;
+    prefersdark: false;
+    color-scheme: light;
 
-  --color-base-100: #ffffff;
-  --color-base-200: #f5f5f5;
-  --color-base-300: #e5e5e5;
-  --color-base-content: #1a1a1a;
-  --color-primary: #386641;
-  --color-primary-content: #ffffff;
-  --color-secondary: #bc4749;
-  --color-secondary-content: #ffffff;
-  --color-accent: #e2b059;
-  --color-accent-content: #1a1a1a;
-  --color-neutral: #1a1a1a;
-  --color-neutral-content: #ffffff;
-  --color-info: #3abff8;
-  --color-info-content: #000000;
-  --color-success: #36d399;
-  --color-success-content: #000000;
-  --color-warning: #fbbd23;
-  --color-warning-content: #000000;
-  --color-error: #f87272;
-  --color-error-content: #000000;
+    --color-base-100: #ffffff;
+    --color-base-200: #f2f0fa;
+    --color-base-300: #e4e0f5;
+    --color-base-content: #1a1630;
+    --color-primary: #6354b8;
+    --color-primary-content: #ffffff;
+    --color-secondary: #c45870;
+    --color-secondary-content: #ffffff;
+    --color-accent: #e8914a;
+    --color-accent-content: #3a1e00;
+    --color-neutral: #1a1630;
+    --color-neutral-content: #f2f0fa;
+    --color-info: #5b82a8;
+    --color-info-content: #ffffff;
+    --color-success: #e8914a;
+    --color-success-content: #3a1e00;
+    --color-warning: #d4a46a;
+    --color-warning-content: #3a2400;
+    --color-error: #c45870;
+    --color-error-content: #ffffff;
 
-  --radius-selector: 1rem;
-  --radius-field: 0.25rem;
-  --radius-box: 0.5rem;
-
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-
-  --border: 1px;
-
-  --depth: 1;
-  --noise: 0;
+    --radius-selector: 1rem;
+    --radius-field: 0.5rem;
+    --radius-box: 1.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
 }
 
 @plugin "daisyui/theme" {
-  name: "plantagoshi-dark";
-  default: false;
-  prefersdark: true;
-  color-scheme: dark;
+    name: 'plantagoshi-dark';
+    default: false;
+    prefersdark: true;
+    color-scheme: dark;
 
-  --color-base-100: #1a1a2e;
-  --color-base-200: #16162a;
-  --color-base-300: #2a2a40;
-  --color-base-content: #e5e5e5;
-  --color-primary: #4a8c5c;
-  --color-primary-content: #ffffff;
-  --color-secondary: #d4626a;
-  --color-secondary-content: #ffffff;
-  --color-accent: #e2b059;
-  --color-accent-content: #1a1a1a;
-  --color-neutral: #e5e5e5;
-  --color-neutral-content: #1a1a1a;
-  --color-info: #3abff8;
-  --color-info-content: #000000;
-  --color-success: #36d399;
-  --color-success-content: #000000;
-  --color-warning: #fbbd23;
-  --color-warning-content: #000000;
-  --color-error: #f87272;
-  --color-error-content: #000000;
+    --color-base-100: #0d0b14;
+    --color-base-200: #1a1630;
+    --color-base-300: #252048;
+    --color-base-content: #e8e4f8;
+    --color-primary: #8b7dc8;
+    --color-primary-content: #ffffff;
+    --color-secondary: #d46880;
+    --color-secondary-content: #ffffff;
+    --color-accent: #f0a458;
+    --color-accent-content: #3a1e00;
+    --color-neutral: #e8e4f8;
+    --color-neutral-content: #0d0b14;
+    --color-info: #7a9ec0;
+    --color-info-content: #001830;
+    --color-success: #f0a458;
+    --color-success-content: #3a1e00;
+    --color-warning: #d4a96a;
+    --color-warning-content: #3a2400;
+    --color-error: #d46880;
+    --color-error-content: #ffffff;
 
-  --radius-selector: 1rem;
-  --radius-field: 0.25rem;
-  --radius-box: 0.5rem;
+    --radius-selector: 1rem;
+    --radius-field: 0.5rem;
+    --radius-box: 1.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+}
 
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
+:root {
+    --emotion-happy: #e8914a;
+    --emotion-angry: #c45870;
+    --emotion-thirsty: #5b82a8;
+    --emotion-sleepy: #3d3472;
 
-  --border: 1px;
+    --sensor-moisture: #5b82a8;
+    --sensor-sunlight: #e8914a;
+    --sensor-temperature: #c45870;
+    --sensor-battery: #6354b8;
+}
 
-  --depth: 1;
-  --noise: 0;
+[data-theme='plantagoshi-dark'] {
+    --emotion-happy: #f0a458;
+    --emotion-content: #8b7dc8;
+    --emotion-angry: #d46880;
+    --emotion-thirsty: #7a9ec0;
+    --emotion-sleepy: #6b5fa8;
+
+    --sensor-moisture: #7a9ec0;
+    --sensor-sunlight: #f0a458;
+    --sensor-temperature: #d46880;
+    --sensor-battery: #8b7dc8;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background-color: var(--color-base-200);
-  color: var(--color-base-content);
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--color-base-200);
+    color: var(--color-base-content);
 }

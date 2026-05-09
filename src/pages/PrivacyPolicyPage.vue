@@ -21,18 +21,24 @@
                         <p class="text-base-content/70">{{ t("privacy.introText") }}</p>
                     </div>
 
-                    <!-- Privacy Officer -->
+                    <!-- Privacy Officers -->
                     <div>
                         <h2 class="text-lg font-bold font-display mb-2">{{ t("privacy.officerTitle") }}</h2>
                         <p class="text-base-content/70 mb-3">{{ t("privacy.officerText") }}</p>
-                        <div class="bg-base-200 rounded-xl p-4">
-                            <p class="font-semibold">{{ t("privacy.officerName") }}</p>
-                            <p class="text-base-content/60">{{ t("privacy.officerRole") }}</p>
-                            <p class="text-base-content/60 mt-1">
-                                {{ t("privacy.officerEmailBefore") }}
-                                <router-link to="/contact" class="text-primary hover:underline">{{ t("privacy.contactPage") }}</router-link>.
-                            </p>
+                        <div class="grid gap-3 sm:grid-cols-2">
+                            <div class="bg-base-200 rounded-xl p-4">
+                                <p class="font-semibold">{{ t("privacy.officer1Name") }}</p>
+                                <p class="text-base-content/60">{{ t("privacy.officer1Role") }}</p>
+                            </div>
+                            <div class="bg-base-200 rounded-xl p-4">
+                                <p class="font-semibold">{{ t("privacy.officer2Name") }}</p>
+                                <p class="text-base-content/60">{{ t("privacy.officer2Role") }}</p>
+                            </div>
                         </div>
+                        <p class="text-base-content/60 text-sm mt-3">
+                            {{ t("privacy.officerEmailBefore") }}
+                            <router-link to="/contact" class="text-primary hover:underline">{{ t("privacy.contactPage") }}</router-link>.
+                        </p>
                     </div>
 
                     <!-- Information We Collect -->

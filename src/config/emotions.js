@@ -1,6 +1,6 @@
 import { Droplets, Moon, Sun, Thermometer } from 'lucide-vue-next';
 
-export const EMOTION_KEYS = ['happy', 'content', 'thirsty', 'angry', 'sleepy'];
+export const EMOTION_KEYS = ['happy', 'thirsty', 'angry', 'sleepy'];
 
 export const emotions = {
     happy: {
@@ -11,16 +11,6 @@ export const emotions = {
             { labelKey: 'hero.moisture', displayValue: '72%', value: 72, icon: Droplets, iconColor: '#5BA4CF', barColor: '#5BA4CF' },
             { labelKey: 'hero.light', displayValue: '820lx', value: 82, icon: Sun, iconColor: '#E2B059', barColor: '#E2B059' },
             { labelKey: 'hero.temp', displayValue: '22°C', value: 55, icon: Thermometer, iconColor: '#386641', barColor: '#386641' },
-        ],
-    },
-    content: {
-        bg: '#A8C5A0',
-        glow: '#386641',
-        face: { eyeRx: 8, eyeRy: 8, eyeYOffset: 0, animClass: '' },
-        stats: [
-            { labelKey: 'hero.moisture', displayValue: '55%', value: 55, icon: Droplets, iconColor: '#5BA4CF', barColor: '#5BA4CF' },
-            { labelKey: 'hero.light', displayValue: '540lx', value: 54, icon: Sun, iconColor: '#E2B059', barColor: '#E2B059' },
-            { labelKey: 'hero.temp', displayValue: '21°C', value: 52, icon: Thermometer, iconColor: '#386641', barColor: '#386641' },
         ],
     },
     thirsty: {

@@ -72,14 +72,6 @@
                 fill="none"
             />
             <path
-                v-if="state === 'content'"
-                d="M 40 66 Q 60 78 80 66"
-                stroke="#1A1A1A"
-                stroke-width="5"
-                stroke-linecap="round"
-                fill="none"
-            />
-            <path
                 v-if="state === 'thirsty'"
                 d="M 36 74 Q 48 66 60 70 Q 72 74 84 68"
                 stroke="#1A1A1A"

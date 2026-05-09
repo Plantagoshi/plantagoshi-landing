@@ -48,7 +48,6 @@ The plant's face is the **emotional core** of every visual. Use it consistently 
 |**Thirsty 💧**|Droopy, half-closed|Blue-tinted UI wash|Moisture < 30%|
 |**Angry 😠**|Sharp eyebrows, narrowed|Secondary Accent `#BC4749` glow/ring|High heat, direct sun overload|
 |**Sleepy 😴**|Closed crescent eyes|Desaturated palette|Night mode / low light|
-|**Content 😌**|Soft, relaxed|Primary Accent `#386641`|Stable, acceptable conditions|
 
 ### Face Design Rules
 

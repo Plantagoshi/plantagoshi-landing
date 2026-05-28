@@ -15,7 +15,6 @@
                 </p>
             </div>
 
-            <!-- Success state -->
             <div v-if="isSuccess" class="text-center py-16">
                 <div
                     class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-success/15 mb-6"
@@ -32,7 +31,6 @@
                 </button>
             </div>
 
-            <!-- Form -->
             <form v-else class="card bg-base-100 shadow-lg" @submit.prevent="handleSubmit">
                 <div class="card-body gap-6 p-8 md:p-10">
                     <div class="form-control">
@@ -78,7 +76,6 @@
                         ></textarea>
                     </div>
 
-                    <!-- Consent checkbox -->
                     <label class="flex items-start gap-3 cursor-pointer">
                         <input v-model="consentChecked" type="checkbox" class="w-4 h-4 mt-0.5 shrink-0 accent-primary rounded border border-base-300 cursor-pointer" />
                         <span class="text-xs text-base-content/60 text-left">
@@ -88,7 +85,6 @@
                         </span>
                     </label>
 
-                    <!-- Error -->
                     <p v-if="error" class="text-error text-sm flex items-center gap-1.5">
                         <CircleAlert class="w-4 h-4 shrink-0" />
                         {{ error }}
@@ -127,6 +123,7 @@ import { useWaitlist } from '../composables/useWaitlist';
 import BaseButton from '../components/BaseButton.vue';
 
 const { t, locale } = useI18n();
+const { subscribe } = useWaitlist();
 
 useHead({
     title: computed(() =>
@@ -145,20 +142,61 @@ useHead({
     ],
     link: [{ rel: 'canonical', href: 'https://plantagoshi.ca/contact' }],
 });
-const consentChecked = ref(false);
-const { isLoading, isSuccess, error, subscribe, reset } = useWaitlist();
 
+const isLoading = ref(false);
+const isSuccess = ref(false);
+const error = ref(null);
+const consentChecked = ref(false);
 const name = ref("");
 const email = ref("");
 const message = ref("");
 
+function reset() {
+    isLoading.value = false;
+    isSuccess.value = false;
+    error.value = null;
+    name.value = "";
+    email.value = "";
+    message.value = "";
+    consentChecked.value = false;
+}
+
 async function handleSubmit() {
     if (!email.value || isLoading.value) return;
-    await subscribe(email.value);
-    if (isSuccess.value) {
-        name.value = "";
-        email.value = "";
-        message.value = "";
+
+    isLoading.value = true;
+    isSuccess.value = false;
+    error.value = null;
+
+    try {
+        const [web3res] = await Promise.all([
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: '422a6399-3411-4bc0-a52b-95d94d2b20c4',
+                    name: name.value,
+                    email: email.value,
+                    message: message.value,
+                }),
+            }),
+            subscribe(email.value).catch(() => {}),
+        ]);
+
+        const data = await web3res.json();
+
+        if (data.success) {
+            isSuccess.value = true;
+        } else {
+            throw new Error(data.message || "Submission failed.");
+        }
+    } catch (err) {
+        error.value = err.message || "Something went wrong. Please try again.";
+    } finally {
+        isLoading.value = false;
     }
 }
 </script>
